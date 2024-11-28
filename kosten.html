@@ -28,17 +28,17 @@
         <div class="max-w-7xl mx-auto px-4 py-16">
             <div class="max-w-3xl mx-auto text-center">
                 <h1 class="text-4xl font-bold text-gray-900 mb-4">
-                    Transparante prijzen voor elk bedrijf
+                    Kies de perfecte klantenservice-oplossing voor jouw bedrijf
                 </h1>
                 <p class="text-lg text-blueline-gray mb-8">
-                    Kies het plan dat het beste bij uw bedrijf past. Alle plannen bevatten een gratis proefperiode van 14 dagen.
+                    Onze flexibele abonnementen zijn ontworpen om jouw bedrijf te ondersteunen en te laten groeien, met alles van basis klantenservice tot geavanceerde strategische analyses en 24/7 omnichannel support. We bieden op maat gemaakte oplossingen die aansluiten bij jouw unieke bedrijfsbehoeften. Selecteer het pakket dat het beste bij jou past en geef jouw klantenservice een boost die jouw klanttevredenheid én omzet verhoogt.
                 </p>
                 <div id="price-options" class="flex justify-center space-x-4">
                     <button onclick="changePrice('monthly')" class="bg-white px-6 py-2 rounded-full shadow-sm hover:shadow-md transition-shadow">
                         Maandelijks
                     </button>
                     <button onclick="changePrice('yearly')" class="bg-blue-600 text-white px-6 py-2 rounded-full shadow-sm hover:shadow-md transition-shadow">
-                        Jaarlijks (2 maanden gratis)
+                        Jaarlijks
                     </button>
                 </div>
             </div>
@@ -48,108 +48,143 @@
     <!-- Pricing Plans -->
     <section class="py-16">
         <div class="max-w-7xl mx-auto px-4">
-            <div class="grid md:grid-cols-3 gap-8">
-                <!-- Starter Plan -->
-                <div id="starter-plan" class="bg-white rounded-lg shadow-lg p-8" data-monthly-price="49">
-                    <h3 class="text-xl font-bold mb-4">Starter</h3>
-                    <div id="starter-price" class="mb-6">
-                        <span class="text-4xl font-bold">€49</span>
-                        <span class="text-blueline-gray">/maand</span>
+            <div class="grid md:grid-cols-4 gap-8">
+                <!-- Ticket Starter Plan -->
+                <div id="ticket-starter-plan" class="bg-white rounded-lg shadow-lg p-8" data-monthly-price="199" data-yearly-price="1908">
+                    <h3 class="text-xl font-bold mb-4">Ticket Starter</h3>
+                    <div id="ticket-starter-price" class="mb-6">
+                        <span class="text-4xl font-bold">€199</span>
+                        <span class="text-blueline-gray">/maand<br/> + €2 / ticket</span>
                     </div>
                     <p class="text-blueline-gray mb-6">Perfect voor kleine teams en startups</p>
                     <ul class="space-y-3 text-blueline-gray mb-8">
                         <li class="flex items-center">
                             <span class="mr-2">✓</span>
-                            Tot 3 gebruikers
+                            E-mail en webformulier
                         </li>
                         <li class="flex items-center">
                             <span class="mr-2">✓</span>
-                            Email & chat support
+                            Pay-per-ticket model
                         </li>
                         <li class="flex items-center">
                             <span class="mr-2">✓</span>
-                            Basis rapportages
+                            Maandelijkse rapportages (responstijden en prestaties)
                         </li>
                         <li class="flex items-center">
                             <span class="mr-2">✓</span>
-                            5GB opslag
+                            Standaard SLA-beheer voor tijdige ondersteuning
                         </li>
                     </ul>
                     <button class="w-full border-2 border-blueline text-blueline hover:bg-blueline hover:text-white px-6 py-3 rounded-lg font-medium transition-colors">
-                        Kies Starter
+                        Kies Ticket Starter
                     </button>
                 </div>
 
-                <!-- Professional Plan -->
-                <div id="pro-plan" class="bg-white rounded-lg shadow-lg p-8 relative" data-monthly-price="99">
+                <!-- Essentials Package Plan -->
+                <div id="essentials-package-plan" class="bg-white rounded-lg shadow-lg p-8 relative" data-monthly-price="499" data-yearly-price="4788">
                     <div class="absolute top-0 right-0 bg-blue-600 text-white px-4 py-1 rounded-tr-lg rounded-bl-lg text-sm">
                         Meest gekozen
                     </div>
-                    <h3 class="text-xl font-bold mb-4">Professional</h3>
-                    <div id="pro-price" class="mb-6">
-                        <span class="text-4xl font-bold">€99</span>
+                    <h3 class="text-xl font-bold mb-4">Essentials Package</h3>
+                    <div id="essentials-package-price" class="mb-6">
+                        <span class="text-4xl font-bold">€499</span>
                         <span class="text-blueline-gray">/maand</span>
                     </div>
-                    <p class="text-blueline-gray mb-6">Voor groeiende bedrijven</p>
+                    <p class="text-blueline-gray mb-6">Essentiele oplossingen voor jouw klantenservice</p>
                     <ul class="space-y-3 text-blueline-gray mb-8">
                         <li class="flex items-center">
                             <span class="mr-2">✓</span>
-                            Tot 10 gebruikers
+                            E-mail, Live Chat, social media
                         </li>
                         <li class="flex items-center">
                             <span class="mr-2">✓</span>
-                            Alle kanalen
+                            Maandelijkse rapportages & analytics
                         </li>
                         <li class="flex items-center">
                             <span class="mr-2">✓</span>
-                            Geavanceerde rapportages
+                            Zelfservice kennisbank & portaal
                         </li>
                         <li class="flex items-center">
                             <span class="mr-2">✓</span>
-                            20GB opslag
+                            Standaard SLA-beheer voor tijdige ondersteuning
                         </li>
                         <li class="flex items-center">
                             <span class="mr-2">✓</span>
-                            API toegang
+                            Ticketprioritering en routing
                         </li>
                     </ul>
                     <button class="w-full bg-blue-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-blue-700 transition-colors">
-                        Kies Professional
+                        Kies Essentials Package
                     </button>
                 </div>
 
-                <!-- Enterprise Plan -->
-                <div id="ent-plan" class="bg-white rounded-lg shadow-lg p-8" data-monthly-price="Op maat">
-                    <h3 class="text-xl font-bold mb-4">Enterprise</h3>
-                    <div id="ent-price" class="mb-6">
+                <!-- Growth Assist Plan -->
+                <div id="growth-assist-plan" class="bg-white rounded-lg shadow-lg p-8" data-monthly-price="799" data-yearly-price="7668">
+                    <h3 class="text-xl font-bold mb-4">Growth Assist</h3>
+                    <div id="growth-assist-price" class="mb-6">
                         <span class="text-4xl font-bold"></span>
                         <span class="text-blueline-gray"></span>
                     </div>
-                    <p class="text-blueline-gray mb-6">Voor grote organisaties</p>
+                    <p class="text-blueline-gray mb-6">Voor groeiende bedrijven.</p>
                     <ul class="space-y-3 text-blueline-gray mb-8">
                         <li class="flex items-center">
                             <span class="mr-2">✓</span>
-                            Onbeperkt gebruikers
+                            Omnichannel Klantenservice met AI-assistenten
                         </li>
                         <li class="flex items-center">
                             <span class="mr-2">✓</span>
-                            24/7 premium support
+                            Wekelijkse rapportages & dashboards
                         </li>
                         <li class="flex items-center">
                             <span class="mr-2">✓</span>
-                            Custom integraties
+                            Kennisbank en custom portaal
                         </li>
                         <li class="flex items-center">
                             <span class="mr-2">✓</span>
-                            Onbeperkte opslag
+                            Inzichtelijke performance dashboards
                         </li>
                         <li class="flex items-center">
                             <span class="mr-2">✓</span>
-                            SLA garantie
+                            Proactieve klantanalyses
                         </li>
                     </ul>
                     <button class="w-full border-2 border-blueline text-blueline hover:bg-blueline hover:text-white px-6 py-3 rounded-lg font-medium transition-colors">
-                        Contact opnemen
+                        Kies Growth Assist
+                    </button>
+                </div>
+
+                <!-- Professional Partner Plan -->
+                <div id="professional-partner-plan" class="bg-white rounded-lg shadow-lg p-8" data-monthly-price="1299" data-yearly-price="12468">
+                    <h3 class="text-xl font-bold mb-4">Professional Partner</h3>
+                    <div id="professional-partner-price" class="mb-6">
+                        <span class="text-4xl font-bold"></span>
+                        <span class="text-blueline-gray"></span>
+                    </div>
+                    <p class="text-blueline-gray mb-6">Full-service oplossingen, inclusief proactieve ondersteuning.</p>
+                    <ul class="space-y-3 text-blueline-gray mb-8">
+                        <li class="flex items-center">
+                            <span class="mr-2">✓</span>
+                            Omnichannel klantenservice + AI en automatisering
+                        </li>
+                        <li class="flex items-center">
+                            <span class="mr-2">✓</span>
+                            Wekelijks rapportages en analyses
+                        </li>
+                        <li class="flex items-center">
+                            <span class="mr-2">✓</span>
+                            Volledig op maat gemaakte kennisbank en klantenportaal.
+                        </li>
+                        <li class="flex items-center">
+                            <span class="mr-2">✓</span>
+                            Proactieve analyse en advies
+                        </li>
+                        <li class="flex items-center">
+                            <span class="mr-2">✓</span>
+                            Premium SLA-beheer
+                        </li>
+                    </ul>
+                    <button class="w-full border-2 border-blueline text-blueline hover:bg-blueline hover:text-white px-6 py-3 rounded-lg font-medium transition-colors">
+                        Kies Professional Partner
                     </button>
                 </div>
             </div>
@@ -180,12 +215,13 @@
             plans.forEach(plan => {
                 const priceDiv = plan.querySelector('[id$="-price"]');
                 const monthlyPrice = plan.getAttribute('data-monthly-price');
+                const yearlyPrice = plan.getAttribute('data-yearly-price');
         
                 if (!isNaN(monthlyPrice)) {
-                    const price = option === 'monthly' ? parseInt(monthlyPrice) : parseInt(monthlyPrice) * 10;
+                    const price = option === 'monthly' ? parseInt(monthlyPrice) : parseInt(yearlyPrice);
                     priceDiv.innerHTML = `
                         <span class="text-4xl font-bold">€${price}</span>
-                        <span class="text-blueline-gray">/${option === 'monthly' ? 'maand' : 'jaar'}</span>
+                        <span class="text-blueline-gray">/${option === 'monthly' ? 'maand + €2 / ticket' : 'jaar'}</span>
                     `;
                 } else {
                     priceDiv.innerHTML = `
@@ -199,6 +235,26 @@
         changePrice('monthly');
     </script>
 
+    <!-- Stats -->
+    <section class="bg-blueline-dark py-24 sm:py-32">
+        <div class="mx-auto max-w-7xl px-6 lg:px-8">
+        <dl class="grid grid-cols-1 gap-x-8 gap-y-16 text-center lg:grid-cols-3">
+            <div class="mx-auto flex max-w-xs flex-col gap-y-4">
+            <dt class="text-base/7 text-white">Outsourcing van klantenservice kan je bedrijf tot 30% besparen op operationele kosten, door het elimineren van de noodzaak voor interne teams.</dt>
+            <dd class="order-first text-3xl font-semibold tracking-tight text-blueline-light sm:text-5xl">30% Kostenbesparing</dd>
+            </div>
+            <div class="mx-auto flex max-w-xs flex-col gap-y-4">
+            <dt class="text-base/7 text-white">69% van de klanten verwacht 24/7 klantenservice, een behoefte die makkelijk te realiseren is door het uitbesteden van support.</dt>
+            <dd class="order-first text-3xl font-semibold tracking-tight text-blueline-light sm:text-5xl">24/7 Beschikbaarheid</dd>
+            </div>
+            <div class="mx-auto flex max-w-xs flex-col gap-y-4">
+            <dt class="text-base/7 text-white">Klanten die positieve service-ervaringen hebben, keren in 88% van de gevallen terug voor herhalingsaankopen.</dt>
+            <dd class="order-first text-3xl font-semibold tracking-tight text-blueline-light sm:text-5xl">88% Klanttevredenheid</dd>
+            </div>
+        </dl>
+        </div>
+    </section>
+  
     <!-- Features Comparison -->
     <section class="py-16 bg-blueline-lightgray">
         <div class="max-w-7xl mx-auto px-4">
@@ -208,29 +264,119 @@
                     <thead>
                         <tr class="bg-gray-50">
                             <th class="px-6 py-4 text-left">Feature</th>
-                            <th class="px-6 py-4 text-center">Starter</th>
-                            <th class="px-6 py-4 text-center">Professional</th>
-                            <th class="px-6 py-4 text-center">Enterprise</th>
+                            <th class="px-6 py-4 text-center">Ticket Starter</th>
+                            <th class="px-6 py-4 text-center">Essentials Package</th>
+                            <th class="px-6 py-4 text-center">Growth Assist</th>
+                            <th class="px-6 py-4 text-center">Professional Partner</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr class="border-t">
-                            <td class="px-6 py-4">Gebruikers</td>
-                            <td class="px-6 py-4 text-center">3</td>
-                            <td class="px-6 py-4 text-center">10</td>
-                            <td class="px-6 py-4 text-center">Onbeperkt</td>
+                            <td class="px-6 py-4">Prijs</td>
+                            <td class="px-6 py-4 text-center">€199 /maand + €2 per ticket</td>
+                            <td class="px-6 py-4 text-center">€499 /maand</td>
+                            <td class="px-6 py-4 text-center">€799 /maand</td>
+                            <td class="px-6 py-4 text-center">€1.299 /maand</td>
                         </tr>
                         <tr class="border-t">
-                            <td class="px-6 py-4">Support kanalen</td>
-                            <td class="px-6 py-4 text-center">2</td>
-                            <td class="px-6 py-4 text-center">Alle</td>
-                            <td class="px-6 py-4 text-center">Alle + Custom</td>
+                            <td class="px-6 py-4">Aanbieding</td>
+                            <td class="px-6 py-4 text-center">Eerste 100 tickets/ maand gratis</td>
+                            <td class="px-6 py-4 text-center">Eerste maand 10% korting</td>
+                            <td class="px-6 py-4 text-center">Eerste maand 10% korting</td>
+                            <td class="px-6 py-4 text-center">Eerste maand 10% korting</td>
                         </tr>
                         <tr class="border-t">
-                            <td class="px-6 py-4">API toegang</td>
+                            <td class="px-6 py-4">Omnichannel klantenservice</td>
+                            <td class="px-6 py-4 text-center">Basis (e-mail/web)</td>
+                            <td class="px-6 py-4 text-center">Volledig (e-mail, chat, social)</td>
+                            <td class="px-6 py-4 text-center">Volledig (AI + Omnichannel)</td>
+                            <td class="px-6 py-4 text-center">Volledig (AI + Omnichannel)</td>
+                        </tr>
+                        <tr class="border-t">
+                            <td class="px-6 py-4">Zelfservice kennisbank</td>
+                            <td class="px-6 py-4 text-center">Basis</td>
+                            <td class="px-6 py-4 text-center">Ja</td>
+                            <td class="px-6 py-4 text-center">Ja (customizable)</td>
+                            <td class="px-6 py-4 text-center">Ja (customizable)</td>
+                        </tr>
+                        <tr class="border-t">
+                            <td class="px-6 py-4">Custom portaal</td>
+                            <td class="px-6 py-4 text-center">Nee</td>
+                            <td class="px-6 py-4 text-center">Nee</td>
+                            <td class="px-6 py-4 text-center">Ja</td>
+                            <td class="px-6 py-4 text-center">Ja</td>
+                        </tr>
+                        <tr class="border-t">
+                            <td class="px-6 py-4">AI-gestuurde automatisering</td>
+                            <td class="px-6 py-4 text-center">Nee</td>
+                            <td class="px-6 py-4 text-center">Nee</td>
+                            <td class="px-6 py-4 text-center">Ja</td>
+                            <td class="px-6 py-4 text-center">Ja</td>
+                        </tr>
+                        <tr class="border-t">
+                            <td class="px-6 py-4">Geavanceerde rapportages</td>
+                            <td class="px-6 py-4 text-center">Basis</td>
+                            <td class="px-6 py-4 text-center">Ja</td>
+                            <td class="px-6 py-4 text-center">Ja (customizable)</td>
+                            <td class="px-6 py-4 text-center">Ja (customizable + proactief)</td>
+                        </tr>
+                        <tr class="border-t">
+                            <td class="px-6 py-4">Proactieve analyse en advies</td>
+                            <td class="px-6 py-4 text-center">Nee</td>
+                            <td class="px-6 py-4 text-center">Nee</td>
+                            <td class="px-6 py-4 text-center">Ja</td>
+                            <td class="px-6 py-4 text-center">Ja</td>
+                        </tr>
+                        <tr class="border-t">
+                            <td class="px-6 py-4">SLA-beheer</td>
+                            <td class="px-6 py-4 text-center">Standaard</td>
+                            <td class="px-6 py-4 text-center">Standaard</td>
+                            <td class="px-6 py-4 text-center">Standaard</td>
+                            <td class="px-6 py-4 text-center">Premium (flexibel)</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <h2 class="text-3xl font-bold text-center my-12">Extra diensten</h2>
+            <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                <table class="w-full">
+                    <thead>
+                        <tr class="bg-gray-50">
+                            <th class="px-6 py-4 text-left">Extra dienst</th>
+                            <th class="px-6 py-4 text-center">Ticket Starter</th>
+                            <th class="px-6 py-4 text-center">Essentials Package</th>
+                            <th class="px-6 py-4 text-center">Growth Assist</th>
+                            <th class="px-6 py-4 text-center">Professional Partner</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="border-t">
+                            <td class="px-6 py-4">Meertalige klantenservice</td>
+                            <td class="px-6 py-4 text-center">€100 /maand</td>
+                            <td class="px-6 py-4 text-center">€100 /maand</td>
+                            <td class="px-6 py-4 text-center">€100 /maand</td>
+                            <td class="px-6 py-4 text-center">€100 /maand</td>
+                        </tr>
+                        <tr class="border-t">
+                            <td class="px-6 py-4">Proactieve rapportages</td>
+                            <td class="px-6 py-4 text-center">€50 /maand</td>
+                            <td class="px-6 py-4 text-center">€50 /maand</td>
+                            <td class="px-6 py-4 text-center">€50 /maand</td>
+                            <td class="px-6 py-4 text-center">€50 /maand</td>
+                        </tr>
+                        <tr class="border-t">
+                            <td class="px-6 py-4">Chatbot ontwikkeling & integratie</td>
+                            <td class="px-6 py-4 text-center">€300 /eenmalig</td>
+                            <td class="px-6 py-4 text-center">€300 /eenmalig</td>
+                            <td class="px-6 py-4 text-center">€300 /eenmalig</td>
+                            <td class="px-6 py-4 text-center">€300 /eenmalig</td>
+                        </tr>
+                        <tr class="border-t">
+                            <td class="px-6 py-4">Premium SLA-beheer</td>
                             <td class="px-6 py-4 text-center">-</td>
-                            <td class="px-6 py-4 text-center">✓</td>
-                            <td class="px-6 py-4 text-center">✓</td>
+                            <td class="px-6 py-4 text-center">-</td>
+                            <td class="px-6 py-4 text-center">-</td>
+                            <td class="px-6 py-4 text-center">€200 /maand</td>
                         </tr>
                     </tbody>
                 </table>
