@@ -54,7 +54,8 @@
                     <h3 class="text-xl font-bold mb-4">Ticket Starter</h3>
                     <div id="ticket-starter-price" class="mb-6">
                         <span class="text-4xl font-bold">€199</span>
-                        <span class="text-blueline-gray">/maand<br/> + €2 / ticket</span>
+                        <span class="text-blueline-gray">/maand</span>
+                        <span class="text-blueline-gray">+ €2 / ticket</span>
                     </div>
                     <p class="text-blueline-gray mb-6">Perfect voor kleine teams en startups</p>
                     <ul class="space-y-3 text-blueline-gray mb-8">
@@ -221,7 +222,7 @@
                     const price = option === 'monthly' ? parseInt(monthlyPrice) : parseInt(yearlyPrice);
                     priceDiv.innerHTML = `
                         <span class="text-4xl font-bold">€${price}</span>
-                        <span class="text-blueline-gray">/${option === 'monthly' ? 'maand + €2 / ticket' : 'jaar'}</span>
+                        <span class="text-blueline-gray">/${option === 'monthly' ? 'maand' : 'jaar'}${plan.id === 'ticket-starter-plan' && option === 'monthly' ? '<br/>+ €2 / ticket' : ''}</span>
                     `;
                 } else {
                     priceDiv.innerHTML = `
