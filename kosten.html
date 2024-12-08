@@ -50,143 +50,317 @@
     <section class="py-16">
         <div class="max-w-7xl mx-auto px-4">
             <div class="grid md:grid-cols-4 gap-8">
-                <!-- Ticket Starter Plan -->
-                <div id="ticket-starter-plan" class="bg-white rounded-lg shadow-lg p-8" data-monthly-price="199" data-yearly-price="1908">
-                    <h3 class="text-xl font-bold mb-4">Ticket Starter</h3>
-                    <div id="ticket-starter-price" class="mb-6">
-                        <span class="text-4xl font-bold">€199</span>
-                        <span class="text-blueline-gray">/maand</span>
-                        <span class="text-blueline-gray">+ €2 / ticket</span>
+                <!-- Basic Plan -->
+                <div id="basic-plan" class="bg-white rounded-lg shadow-lg p-8" data-monthly-price="199" data-yearly-price="179">
+                    <h3 class="text-xl font-bold mb-4">Basic</h3>
+                    <section class="min-h-[250px]">
+                        <div id="basic-price" class="mb-6">
+                            <span class="text-4xl font-bold">€199</span>
+                            <span class="text-blueline-gray">/maand</span>
+                            <span class="text-blueline-gray">+ €2 / ticket</span>
+                        </div>
+                        <div class="p-2 mb-4 text-sm text-blueline rounded-lg bg-blue-50/80" role="alert">
+                            <span class="font-bold">Tijdelijk:</span><br/>eerste 100 tickets / maand gratis!
+                        </div>
+                        <p class="text-blueline-gray mb-6">Perfect voor kleine teams en startups</p>
+                    </section>
+                    <button class="w-full bg-blueline text-white p-2 flex justify-between items-center rounded-t-lg" onclick="toggleCollapse('basic-kanalen')">
+                        <span>Kanalen</span>
+                        <span id="basic-kanalen-indicator" class="text-xl">+</span>
+                    </button>
+                    <div id="basic-kanalen" class="hidden transition-all duration-300 overflow-hidden">
+                        <div class="bg-blueline-lightgray p-2">
+                            <p class="text-sm"><span class="mr-2">✓</span>E-mail</p>
+                            <p class="text-sm"><span class="mr-2">✓</span>Webformulier</p>
+                        </div>
                     </div>
-                    <p class="text-blueline-gray mb-6">Perfect voor kleine teams en startups</p>
-                    <ul class="space-y-3 text-blueline-gray mb-8">
-                        <li class="flex items-center">
-                            <span class="mr-2">✓</span>
-                            E-mail en webformulier
-                        </li>
-                        <li class="flex items-center">
-                            <span class="mr-2">✓</span>
-                            Pay-per-ticket model
-                        </li>
-                        <li class="flex items-center">
-                            <span class="mr-2">✓</span>
-                            Maandelijkse rapportages (responstijden en prestaties)
-                        </li>
-                        <li class="flex items-center">
-                            <span class="mr-2">✓</span>
-                            Standaard SLA-beheer voor tijdige ondersteuning
-                        </li>
-                    </ul>
-                    <button class="w-full border-2 border-blueline text-blueline hover:bg-blueline hover:text-white px-6 py-3 rounded-lg font-medium transition-colors">
-                        Kies Ticket Starter
+                    <button class="w-full bg-blueline text-white p-2 flex justify-between items-center" onclick="toggleCollapse('basic-integraties')">
+                        <span>Integraties</span>
+                        <span id="basic-integraties-indicator" class="text-xl">+</span>
+                    </button>
+                    <div id="basic-integraties" class="hidden transition-all duration-300 overflow-hidden">
+                        <div class="bg-blueline-lightgray p-2">
+                            <p class="text-sm"><span class="mr-2">✓</span>API</p>
+                            <p class="text-sm"><span class="mr-2">✓</span>Shopify</p>
+                            <p class="text-sm"><span class="mr-2">✓</span>Woocommerce</p>
+                        </div>
+                    </div>
+                    <button class="w-full bg-blueline text-white p-2 flex justify-between items-center" onclick="toggleCollapse('basic-services')">
+                        <span>Services</span>
+                        <span id="basic-services-indicator" class="text-xl">+</span>
+                    </button>
+                    <div id="basic-services" class="hidden transition-all duration-300 overflow-hidden">
+                        <div class="bg-blueline-lightgray p-2">
+                            <p class="text-sm"><span class="mr-2">✓</span>Klanttevredenheids-onderzoek</p>
+                        </div>
+                    </div>
+                    <button class="w-full bg-blueline text-white p-2 flex justify-between items-center" onclick="toggleCollapse('basic-rapportages')">
+                        <span>Rapportages</span>
+                        <span id="basic-rapportages-indicator" class="text-xl">+</span>
+                    </button>
+                    <div id="basic-rapportages" class="hidden transition-all duration-300 overflow-hidden">
+                        <div class="bg-blueline-lightgray p-2">
+                            <p class="text-sm"><span class="mr-2">✓</span>Standaard rapportage / maand</p>
+                        </div>
+                    </div>
+                    <button class="w-full bg-blueline text-white p-2 flex justify-between items-center" onclick="toggleCollapse('basic-addons')">
+                        <span>Add-ons</span>
+                        <span id="basic-addons-indicator" class="text-xl">+</span>
+                    </button>
+                    <div id="basic-addons" class="hidden transition-all duration-300 overflow-hidden">
+                        <div class="bg-blueline-lightgray p-2">
+                            <p class="text-sm"><span class="mr-2">✓</span>Customised portaal</p>
+                        </div>
+                    </div>
+
+                    <button class="w-full border-2 border-blueline text-blueline hover:bg-blueline hover:text-white px-6 py-3 rounded-b-lg font-medium transition-colors">
+                        Kies Basic
                     </button>
                 </div>
 
-                <!-- Essentials Package Plan -->
-                <div id="essentials-package-plan" class="bg-white rounded-lg shadow-lg p-8 relative" data-monthly-price="499" data-yearly-price="4788">
+                <!-- Growth Plan -->
+                <div id="growth-plan" class="bg-white rounded-lg shadow-lg p-8 relative" data-monthly-price="499" data-yearly-price="224">
                     <div class="absolute top-0 right-0 bg-blue-600 text-white px-4 py-1 rounded-tr-lg rounded-bl-lg text-sm">
                         Meest gekozen
                     </div>
-                    <h3 class="text-xl font-bold mb-4">Essentials Package</h3>
-                    <div id="essentials-package-price" class="mb-6">
-                        <span class="text-4xl font-bold">€499</span>
-                        <span class="text-blueline-gray">/maand</span>
+                    <h3 class="text-xl font-bold mb-4">Growth</h3>
+                    <section class="min-h-[250px]">
+                        <div id="basic-price" class="mb-6">
+                            <span class="text-4xl font-bold">€499</span>
+                            <span class="text-blueline-gray">/maand</span>
+                        </div>
+                        <div class="p-2 mb-4 text-sm text-blueline rounded-lg bg-blue-50/80" role="alert">
+                            <span class="font-bold">Tijdelijk:</span><br/>1e maand 10% korting!
+                        </div>
+                        <p class="text-blueline-gray mb-6">Essentiele oplossingen voor jouw klantenservice</p>
+                    </section>
+                    <button class="w-full bg-blueline text-white p-2 flex justify-between items-center rounded-t-lg" onclick="toggleCollapse('growth-kanalen')">
+                        <span>Kanalen</span>
+                        <span id="growth-kanalen-indicator" class="text-xl">+</span>
+                    </button>
+                    <div id="growth-kanalen" class="hidden transition-all duration-300 overflow-hidden">
+                        <div class="bg-blueline-lightgray p-2">
+                            <p class="text-sm"><span class="mr-2">✓</span>E-mail</p>
+                            <p class="text-sm"><span class="mr-2">✓</span>Webformulier</p>
+                            <p class="text-sm"><span class="mr-2">✓</span>Facebook Messenger</p>
+                        </div>
                     </div>
-                    <p class="text-blueline-gray mb-6">Essentiele oplossingen voor jouw klantenservice</p>
-                    <ul class="space-y-3 text-blueline-gray mb-8">
-                        <li class="flex items-center">
-                            <span class="mr-2">✓</span>
-                            E-mail, Live Chat, social media
-                        </li>
-                        <li class="flex items-center">
-                            <span class="mr-2">✓</span>
-                            Maandelijkse rapportages & analytics
-                        </li>
-                        <li class="flex items-center">
-                            <span class="mr-2">✓</span>
-                            Zelfservice kennisbank & portaal
-                        </li>
-                        <li class="flex items-center">
-                            <span class="mr-2">✓</span>
-                            Standaard SLA-beheer voor tijdige ondersteuning
-                        </li>
-                        <li class="flex items-center">
-                            <span class="mr-2">✓</span>
-                            Ticketprioritering en routing
-                        </li>
-                    </ul>
-                    <button class="w-full bg-blue-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-blue-700 transition-colors">
-                        Kies Essentials Package
+                    <button class="w-full bg-blueline text-white p-2 flex justify-between items-center" onclick="toggleCollapse('growth-integraties')">
+                        <span>Integraties</span>
+                        <span id="growth-integraties-indicator" class="text-xl">+</span>
+                    </button>
+                    <div id="growth-integraties" class="hidden transition-all duration-300 overflow-hidden">
+                        <div class="bg-blueline-lightgray p-2">
+                            <p class="text-sm"><span class="mr-2">✓</span>API</p>
+                            <p class="text-sm"><span class="mr-2">✓</span>Shopify</p>
+                            <p class="text-sm"><span class="mr-2">✓</span>Woocommerce</p>
+                            <p class="text-sm"><span class="mr-2">✓</span>Google apps</p>
+                        </div>
+                    </div>
+                    <button class="w-full bg-blueline text-white p-2 flex justify-between items-center" onclick="toggleCollapse('growth-services')">
+                        <span>Services</span>
+                        <span id="growth-services-indicator" class="text-xl">+</span>
+                    </button>
+                    <div id="growth-services" class="hidden transition-all duration-300 overflow-hidden">
+                        <div class="bg-blueline-lightgray p-2">
+                            <p class="text-sm"><span class="mr-2">✓</span>Klanttevredenheids-onderzoek</p>
+                        </div>
+                    </div>
+                    <button class="w-full bg-blueline text-white p-2 flex justify-between items-center" onclick="toggleCollapse('growth-rapportages')">
+                        <span>Rapportages</span>
+                        <span id="growth-rapportages-indicator" class="text-xl">+</span>
+                    </button>
+                    <div id="growth-rapportages" class="hidden transition-all duration-300 overflow-hidden">
+                        <div class="bg-blueline-lightgray p-2">
+                            <p class="text-sm"><span class="mr-2">✓</span>Standaard rapportage / maand</p>
+                        </div>
+                    </div>
+                    <button class="w-full bg-blueline text-white p-2 flex justify-between items-center" onclick="toggleCollapse('growth-addons')">
+                        <span>Add-ons</span>
+                        <span id="growth-addons-indicator" class="text-xl">+</span>
+                    </button>
+                    <div id="growth-addons" class="hidden transition-all duration-300 overflow-hidden">
+                        <div class="bg-blueline-lightgray p-2">
+                            <p class="text-sm"><span class="mr-2">✓</span>Customised portaal</p>
+                            <p class="text-sm"><span class="mr-2">✓</span>Chatbot</p>
+                            <p class="text-sm"><span class="mr-2">✓</span>Analyse van de beste klanten</p>
+                            <p class="text-sm"><span class="mr-2">✓</span>Proactief campagnetrajecten</p>
+                        </div>
+                    </div>
+
+                    <button class="w-full border-2 border-blueline text-white bg-blueline hover:bg-blueline-light px-6 py-3 rounded-b-lg font-medium transition-colors">
+                        Kies Growth
                     </button>
                 </div>
 
-                <!-- Growth Assist Plan -->
-                <div id="growth-assist-plan" class="bg-white rounded-lg shadow-lg p-8" data-monthly-price="799" data-yearly-price="7668">
-                    <h3 class="text-xl font-bold mb-4">Growth Assist</h3>
-                    <div id="growth-assist-price" class="mb-6">
-                        <span class="text-4xl font-bold"></span>
-                        <span class="text-blueline-gray"></span>
+                <!-- Professional Plan -->
+                <div id="professional-plan" class="bg-white rounded-lg shadow-lg p-8" data-monthly-price="799" data-yearly-price="639">
+                    <h3 class="text-xl font-bold mb-4">Professional</h3>
+                    <section class="min-h-[250px]">
+                        <div id="basic-price" class="mb-6">
+                            <span class="text-4xl font-bold">€799</span>
+                            <span class="text-blueline-gray">/maand</span>
+                        </div>
+                        <div class="p-2 mb-4 text-sm text-blueline rounded-lg bg-blue-50/80" role="alert">
+                            <span class="font-bold">Tijdelijk:</span><br/>1e maand 10% korting!
+                        </div>
+                        <p class="text-blueline-gray mb-6">Voor groeiende bedrijven.</p>
+                    </section>
+                    <button class="w-full bg-blueline text-white p-2 flex justify-between items-center rounded-t-lg" onclick="toggleCollapse('professional-kanalen')">
+                        <span>Kanalen</span>
+                        <span id="professional-kanalen-indicator" class="text-xl">+</span>
+                    </button>
+                    <div id="professional-kanalen" class="hidden transition-all duration-300 overflow-hidden">
+                        <div class="bg-blueline-lightgray p-2">
+                            <p class="text-sm"><span class="mr-2">✓</span>E-mail</p>
+                            <p class="text-sm"><span class="mr-2">✓</span>Webformulier</p>
+                            <p class="text-sm"><span class="mr-2">✓</span>Facebook Messenger</p>
+                            <p class="text-sm"><span class="mr-2">✓</span>Live chat</p>
+                            <p class="text-sm"><span class="mr-2">✓</span>Slack</p>
+                            <p class="text-sm"><span class="mr-2">✓</span>Chatbot</p>
+                        </div>
                     </div>
-                    <p class="text-blueline-gray mb-6">Voor groeiende bedrijven.</p>
-                    <ul class="space-y-3 text-blueline-gray mb-8">
-                        <li class="flex items-center">
-                            <span class="mr-2">✓</span>
-                            Omnichannel Klantenservice met AI-assistenten
-                        </li>
-                        <li class="flex items-center">
-                            <span class="mr-2">✓</span>
-                            Wekelijkse rapportages & dashboards
-                        </li>
-                        <li class="flex items-center">
-                            <span class="mr-2">✓</span>
-                            Kennisbank en custom portaal
-                        </li>
-                        <li class="flex items-center">
-                            <span class="mr-2">✓</span>
-                            Inzichtelijke performance dashboards
-                        </li>
-                        <li class="flex items-center">
-                            <span class="mr-2">✓</span>
-                            Proactieve klantanalyses
-                        </li>
-                    </ul>
-                    <button class="w-full border-2 border-blueline text-blueline hover:bg-blueline hover:text-white px-6 py-3 rounded-lg font-medium transition-colors">
-                        Kies Growth Assist
+                    <button class="w-full bg-blueline text-white p-2 flex justify-between items-center" onclick="toggleCollapse('professional-integraties')">
+                        <span>Integraties</span>
+                        <span id="professional-integraties-indicator" class="text-xl">+</span>
+                    </button>
+                    <div id="professional-integraties" class="hidden transition-all duration-300 overflow-hidden">
+                        <div class="bg-blueline-lightgray p-2">
+                            <p class="text-sm"><span class="mr-2">✓</span>API</p>
+                            <p class="text-sm"><span class="mr-2">✓</span>Shopify</p>
+                            <p class="text-sm"><span class="mr-2">✓</span>Woocommerce</p>
+                            <p class="text-sm"><span class="mr-2">✓</span>Google apps</p>
+                            <p class="text-sm"><span class="mr-2">✓</span>Salesforce</p>
+                            <p class="text-sm"><span class="mr-2">✓</span>Amazon</p>
+                            <p class="text-sm"><span class="mr-2">✓</span>Kennisbank</p>
+                        </div>
+                    </div>
+                    <button class="w-full bg-blueline text-white p-2 flex justify-between items-center" onclick="toggleCollapse('professional-services')">
+                        <span>Services</span>
+                        <span id="professional-services-indicator" class="text-xl">+</span>
+                    </button>
+                    <div id="professional-services" class="hidden transition-all duration-300 overflow-hidden">
+                        <div class="bg-blueline-lightgray p-2">
+                            <p class="text-sm"><span class="mr-2">✓</span>Klanttevredenheids-onderzoek</p>
+                            <p class="text-sm"><span class="mr-2">✓</span>E-mail klantcampagne</p>
+                        </div>
+                    </div>
+                    <button class="w-full bg-blueline text-white p-2 flex justify-between items-center" onclick="toggleCollapse('professional-rapportages')">
+                        <span>Rapportages</span>
+                        <span id="professional-rapportages-indicator" class="text-xl">+</span>
+                    </button>
+                    <div id="professional-rapportages" class="hidden transition-all duration-300 overflow-hidden">
+                        <div class="bg-blueline-lightgray p-2">
+                            <p class="text-sm"><span class="mr-2">✓</span>Standaard rapportage / maand</p>
+                        </div>
+                    </div>
+                    <button class="w-full bg-blueline text-white p-2 flex justify-between items-center" onclick="toggleCollapse('professional-addons')">
+                        <span>Add-ons</span>
+                        <span id="professional-addons-indicator" class="text-xl">+</span>
+                    </button>
+                    <div id="professional-addons" class="hidden transition-all duration-300 overflow-hidden">
+                        <div class="bg-blueline-lightgray p-2">
+                            <p class="text-sm"><span class="mr-2">✓</span>Customised portaal</p>
+                            <p class="text-sm"><span class="mr-2">✓</span>AI chatbot / emailbot</p>
+                            <p class="text-sm"><span class="mr-2">✓</span>Analyse van de beste klanten</p>
+                            <p class="text-sm"><span class="mr-2">✓</span>Proactief campagnetrajecten</p>
+                            <p class="text-sm"><span class="mr-2">✓</span>Whatsapp klantcampagne</p>
+                            <p class="text-sm"><span class="mr-2">✓</span>SMS klantcampagne</p>
+                            <p class="text-sm"><span class="mr-2">✓</span>Detail analyse ticketrapport</p>
+                            <p class="text-sm"><span class="mr-2">✓</span>Meertalige ondersteuning</p>
+                            <p class="text-sm"><span class="mr-2">✓</span>Telefoon</p>
+                        </div>
+                    </div>
+
+                    <button class="w-full border-2 border-blueline text-blueline hover:bg-blueline hover:text-white px-6 py-3 rounded-b-lg font-medium transition-colors">
+                        Kies Professional
                     </button>
                 </div>
 
-                <!-- Professional Partner Plan -->
-                <div id="professional-partner-plan" class="bg-white rounded-lg shadow-lg p-8" data-monthly-price="1299" data-yearly-price="12468">
-                    <h3 class="text-xl font-bold mb-4">Professional Partner</h3>
-                    <div id="professional-partner-price" class="mb-6">
-                        <span class="text-4xl font-bold"></span>
-                        <span class="text-blueline-gray"></span>
+                <!-- Enterprise Plan -->
+                <div id="enterprise-partner-plan" class="bg-white rounded-lg shadow-lg p-8" data-monthly-price="Let's Talk" data-yearly-price="Let's Talk">
+                    <h3 class="text-xl font-bold mb-4">Enterprise</h3>
+                    <section class="min-h-[250px]">
+                        <div id="basic-price" class="mb-6">
+                            <span class="text-4xl font-bold">€799</span>
+                            <span class="text-blueline-gray">/maand</span>
+                        </div>
+                        <div class="p-2 mb-4 text-sm text-blueline rounded-lg bg-blue-50/80 hidden" role="alert">
+                            <span class="font-bold">Tijdelijk:</span><br/>&nbsp;
+                        </div>
+                        <p class="text-blueline-gray mb-6">Full-service oplossingen, inclusief proactieve ondersteuning.</p>
+                    </section>
+                    <button class="w-full bg-blueline text-white p-2 flex justify-between items-center rounded-t-lg" onclick="toggleCollapse('enterprise-kanalen')">
+                        <span>Kanalen</span>
+                        <span id="enterprise-kanalen-indicator" class="text-xl">+</span>
+                    </button>
+                    <div id="enterprise-kanalen" class="hidden transition-all duration-300 overflow-hidden">
+                        <div class="bg-blueline-lightgray p-2">
+                            <p class="text-sm"><span class="mr-2">✓</span>E-mail</p>
+                            <p class="text-sm"><span class="mr-2">✓</span>Webformulier</p>
+                            <p class="text-sm"><span class="mr-2">✓</span>Facebook Messenger</p>
+                            <p class="text-sm"><span class="mr-2">✓</span>Live chat</p>
+                            <p class="text-sm"><span class="mr-2">✓</span>Slack</p>
+                            <p class="text-sm"><span class="mr-2">✓</span>Chatbot</p>
+                            <p class="text-sm"><span class="mr-2">✓</span>Google's Business Messages</p>
+                            <p class="text-sm"><span class="mr-2">✓</span>SMS</p>
+                            <p class="text-sm"><span class="mr-2">✓</span>WhatsApp</p>
+                            <p class="text-sm"><span class="mr-2">✓</span>Instagram</p>
+                            <p class="text-sm"><span class="mr-2">✓</span>Telefoon</p>
+                            <p class="text-sm"><span class="mr-2">✓</span>Meertalige ondersteuning</p>
+                        </div>
                     </div>
-                    <p class="text-blueline-gray mb-6">Full-service oplossingen, inclusief proactieve ondersteuning.</p>
-                    <ul class="space-y-3 text-blueline-gray mb-8">
-                        <li class="flex items-center">
-                            <span class="mr-2">✓</span>
-                            Omnichannel klantenservice + AI en automatisering
-                        </li>
-                        <li class="flex items-center">
-                            <span class="mr-2">✓</span>
-                            Wekelijks rapportages en analyses
-                        </li>
-                        <li class="flex items-center">
-                            <span class="mr-2">✓</span>
-                            Volledig op maat gemaakte kennisbank en klantenportaal.
-                        </li>
-                        <li class="flex items-center">
-                            <span class="mr-2">✓</span>
-                            Proactieve analyse en advies
-                        </li>
-                        <li class="flex items-center">
-                            <span class="mr-2">✓</span>
-                            Premium SLA-beheer
-                        </li>
-                    </ul>
-                    <button class="w-full border-2 border-blueline text-blueline hover:bg-blueline hover:text-white px-6 py-3 rounded-lg font-medium transition-colors">
-                        Kies Professional Partner
+                    <button class="w-full bg-blueline text-white p-2 flex justify-between items-center" onclick="toggleCollapse('enterprise-integraties')">
+                        <span>Integraties</span>
+                        <span id="enterprise-integraties-indicator" class="text-xl">+</span>
+                    </button>
+                    <div id="enterprise-integraties" class="hidden transition-all duration-300 overflow-hidden">
+                        <div class="bg-blueline-lightgray p-2">
+                            <p class="text-sm"><span class="mr-2">✓</span>API</p>
+                            <p class="text-sm"><span class="mr-2">✓</span>Shopify</p>
+                            <p class="text-sm"><span class="mr-2">✓</span>Woocommerce</p>
+                            <p class="text-sm"><span class="mr-2">✓</span>Google apps</p>
+                            <p class="text-sm"><span class="mr-2">✓</span>Salesforce</p>
+                            <p class="text-sm"><span class="mr-2">✓</span>Amazon</p>
+                            <p class="text-sm"><span class="mr-2">✓</span>Kennisbank</p>
+                            <p class="text-sm"><span class="mr-2">✓</span>Custom portal</p>
+                        </div>
+                    </div>
+                    <button class="w-full bg-blueline text-white p-2 flex justify-between items-center" onclick="toggleCollapse('enterprise-services')">
+                        <span>Services</span>
+                        <span id="enterprise-services-indicator" class="text-xl">+</span>
+                    </button>
+                    <div id="enterprise-services" class="hidden transition-all duration-300 overflow-hidden">
+                        <div class="bg-blueline-lightgray p-2">
+                            <p class="text-sm"><span class="mr-2">✓</span>Klanttevredenheids-onderzoek</p>
+                            <p class="text-sm"><span class="mr-2">✓</span>E-mail klantcampagne</p>
+                        </div>
+                    </div>
+                    <button class="w-full bg-blueline text-white p-2 flex justify-between items-center" onclick="toggleCollapse('enterprise-rapportages')">
+                        <span>Rapportages</span>
+                        <span id="enterprise-rapportages-indicator" class="text-xl">+</span>
+                    </button>
+                    <div id="enterprise-rapportages" class="hidden transition-all duration-300 overflow-hidden">
+                        <div class="bg-blueline-lightgray p-2">
+                            <p class="text-sm"><span class="mr-2">✓</span>Custom rapportage / week</p>
+                            <p class="text-sm"><span class="mr-2">✓</span>Detail analyse ticketrapport</p>
+                            <p class="text-sm"><span class="mr-2">✓</span>Analyse van de beste klanten</p>
+                        </div>
+                    </div>
+                    <button class="w-full bg-blueline text-white p-2 flex justify-between items-center" onclick="toggleCollapse('enterprise-addons')">
+                        <span>Add-ons</span>
+                        <span id="enterprise-addons-indicator" class="text-xl">+</span>
+                    </button>
+                    <div id="enterprise-addons" class="hidden transition-all duration-300 overflow-hidden">
+                        <div class="bg-blueline-lightgray p-2">
+                            <p class="text-sm"><span class="mr-2">✓</span>AI chatbot / emailbot</p>
+                            <p class="text-sm"><span class="mr-2">✓</span>Whatsapp klantcampagne</p>
+                            <p class="text-sm"><span class="mr-2">✓</span>SMS klantcampagne</p>
+                        </div>
+                    </div>
+
+                    <button class="w-full border-2 border-blueline text-blueline hover:bg-blueline hover:text-white px-6 py-3 rounded-b-lg font-medium transition-colors">
+                        Kies Enterprise
                     </button>
                 </div>
             </div>
@@ -223,7 +397,7 @@
                     const price = option === 'monthly' ? parseInt(monthlyPrice) : parseInt(yearlyPrice);
                     priceDiv.innerHTML = `
                         <span class="text-4xl font-bold">€${price}</span>
-                        <span class="text-blueline-gray">/${option === 'monthly' ? 'maand' : 'jaar'}${plan.id === 'ticket-starter-plan' && option === 'monthly' ? '<br/>+ €2 / ticket' : ''}</span>
+                        <span class="text-blueline-gray">/${option === 'monthly' ? 'maand' : 'maand/jaar'}${plan.id === 'basic-plan' && option === 'monthly' ? '<br/>+ €2 / ticket' : ''}</span>
                     `;
                 } else {
                     priceDiv.innerHTML = `
@@ -258,7 +432,7 @@
     </section>
   
     <!-- Features Comparison -->
-    <section class="py-16 bg-blueline-lightgray">
+    <!-- <section class="py-16 bg-blueline-lightgray">
         <div class="max-w-7xl mx-auto px-4">
             <h2 class="text-3xl font-bold text-center mb-12">Vergelijk alle features</h2>
             <div class="bg-white rounded-lg shadow-lg overflow-hidden">
@@ -278,14 +452,14 @@
                             <td class="px-6 py-4 text-center">€199 /maand + €2 per ticket</td>
                             <td class="px-6 py-4 text-center">€499 /maand</td>
                             <td class="px-6 py-4 text-center">€799 /maand</td>
-                            <td class="px-6 py-4 text-center">€1.299 /maand</td>
+                            <td class="px-6 py-4 text-center">Neem contact op</td>
                         </tr>
                         <tr class="border-t">
                             <td class="px-6 py-4">Aanbieding</td>
-                            <td class="px-6 py-4 text-center">Eerste 100 tickets/ maand gratis</td>
+                            <td class="px-6 py-4 text-center">Eerste 100 tickets / maand gratis</td>
                             <td class="px-6 py-4 text-center">Eerste maand 10% korting</td>
                             <td class="px-6 py-4 text-center">Eerste maand 10% korting</td>
-                            <td class="px-6 py-4 text-center">Eerste maand 10% korting</td>
+                            <td class="px-6 py-4 text-center"></td>
                         </tr>
                         <tr class="border-t">
                             <td class="px-6 py-4">Omnichannel klantenservice</td>
@@ -384,7 +558,7 @@
                 </table>
             </div>
         </div>
-    </section>
+    </section> -->
 
     <!-- FAQ Section -->
     <section class="py-16">
