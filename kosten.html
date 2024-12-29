@@ -16,10 +16,10 @@
                 <a href="/diensten.html" class="hover:text-blue-600">Features</a>
                 <a href="/integraties.html" class="hover:text-blue-600">Integraties</a>
                 <a href="/kosten.html" class="font-bold hover:text-blue-600">Kosten</a>
-                <a href="/blog/" class="hover:text-blue-600">Blog</a>
+                <!-- <a href="/blog/" class="hover:text-blue-600">Blog</a> -->
             </div>
             <button class="bg-blue-600 text-white px-6 py-2 rounded-full hover:bg-blue-700">
-                Start Free Trial
+                Start vandaag
             </button>
         </div>
     </nav>
@@ -32,7 +32,7 @@
                     Kies de perfecte oplossing voor jouw bedrijf
                 </h1>
                 <p class="text-lg text-blueline-gray mb-8">
-                    Onze flexibele abonnementen zijn ontworpen om jouw bedrijf te ondersteunen en te laten groeien. Selecteer de service die het best bij je past en vraag een gratis adviesgesprek aan.
+                    Onze flexibele abonnementen zijn ontworpen om jouw organisatie te versterken en groei te realiseren. Kies de service die aansluit bij jouw doelen en plan een vrijblijvend adviesgesprek. Heb je extra wensen? Met onze add-ons stel je eenvoudig je pakket samen dat perfect past bij jouw behoeften. Van telefonische ondersteuning tot meertalige klantenservice, er is altijd een optie die aansluit bij jouw specifieke situatie.
                 </p>
                 <div id="price-options" class="flex justify-center space-x-4">
                     <button onclick="changePrice('monthly')" class="bg-white px-6 py-2 rounded-full shadow-sm hover:shadow-md transition-shadow">
@@ -51,316 +51,197 @@
     <section class="py-16">
         <div class="max-w-7xl mx-auto px-4">
             <div class="grid md:grid-cols-4 gap-8">
-                <!-- Basic Plan -->
-                <div id="basic-plan" class="bg-white rounded-lg shadow-lg p-8" data-monthly-price="199" data-yearly-price="179">
-                    <h3 class="text-xl font-bold mb-4">Basic</h3>
+                <!-- Essentials Plan -->
+                <div id="essentials-plan" class="bg-white rounded-lg shadow-lg p-8" data-monthly-price="499" data-yearly-price="449">
+                    <h3 class="text-xl font-bold mb-4">Customer Care:<br><span class="bg-blue-100/50 px-2">Essentials</span></h3>
                     <section class="min-h-[250px]">
-                        <div id="basic-price" class="mb-6">
-                            <span class="text-4xl font-bold">€199</span>
-                            <span class="text-blueline-gray">/maand</span>
-                            <span class="text-blueline-gray">+ €2 / ticket</span>
-                        </div>
-                        <div class="p-2 mb-4 text-sm text-blueline rounded-lg bg-blue-50/80" role="alert">
-                            <span class="font-bold">Tijdelijk:</span><br/>eerste 100 tickets / maand gratis!
-                        </div>
-                        <p class="text-blueline-gray mb-6">Perfect voor kleine teams en startups</p>
+                        <p class="text-blueline-gray">
+                            Voor bedrijven die een solide basis willen leggen in hun klantenservice. Dit pakket richt zich op het efficiënt beheren van e-mail en webformulierverzoeken, ondersteund door maandelijkse rapportages en inzicht in klanttevredenheid.
+                        </p>
                     </section>
-                    <button class="w-full bg-blueline text-white p-2 flex justify-between items-center rounded-t-lg" onclick="toggleCollapse('basic-kanalen')">
-                        <span>Kanalen</span>
-                        <span id="basic-kanalen-indicator" class="text-xl">+</span>
-                    </button>
-                    <div id="basic-kanalen" class="hidden transition-all duration-300 overflow-hidden">
-                        <div class="bg-blueline-lightgray p-2">
-                            <p class="text-sm"><span class="mr-2">✓</span>E-mail</p>
-                            <p class="text-sm"><span class="mr-2">✓</span>Webformulier</p>
-                        </div>
+                    <section class="bg-blue-50/80 p-2 rounded-lg mb-6 text-sm">
+                        <strong>Kanalen:</strong>
+                        <ul class="mb-2">
+                            <li class="list-disc ml-4">E-mail</li>
+                            <li class="list-disc ml-4">Webformulier</li>
+                        </ul>
+                        <strong>Specificaties:</strong>
+                        <ul class="mb-2">
+                            <li class="list-disc ml-4">Volume: Tot 250 tickets per maand</li>
+                            <li class="list-disc ml-4">Extra tickets: €3 per extra ticket boven de 250</li>
+                        </ul>
+                        <strong>Inbegrepen diensten:</strong>
+                        <ul class="mb-2">
+                            <li class="list-disc ml-4">Beantwoorden van klantvragen:<br>
+                                <em>Snelle en professionele verwerking van klantvragen via e-mail en webformulier.</em>
+                            </li>
+                            <li class="list-disc ml-4">Klanttevredenheidsonderzoek (CSAT):<br>
+                                <em>Periodieke klanttevredenheidsmetingen om verbeterpunten te signaleren.</em>
+                            </li>
+                            <li class="list-disc ml-4">Rapportage:<br>
+                                <em>Maandelijkse samenvatting van klantinteracties, prestaties en trends, inclusief CSAT-resultaten.</em>
+                            </li>
+                        </ul>
+                    </section>
+                    <div id="essentials-price" class="mb-6">
+                        <span class="text-4xl font-bold">€499</span>
+                        <span class="text-blueline-gray">/maand</span>
                     </div>
-                    <button class="w-full bg-blueline text-white p-2 flex justify-between items-center" onclick="toggleCollapse('basic-integraties')">
-                        <span>Integraties</span>
-                        <span id="basic-integraties-indicator" class="text-xl">+</span>
-                    </button>
-                    <div id="basic-integraties" class="hidden transition-all duration-300 overflow-hidden">
-                        <div class="bg-blueline-lightgray p-2">
-                            <p class="text-sm"><span class="mr-2">✓</span>API</p>
-                            <p class="text-sm"><span class="mr-2">✓</span>Shopify</p>
-                            <p class="text-sm"><span class="mr-2">✓</span>Woocommerce</p>
-                        </div>
-                    </div>
-                    <button class="w-full bg-blueline text-white p-2 flex justify-between items-center" onclick="toggleCollapse('basic-services')">
-                        <span>Services</span>
-                        <span id="basic-services-indicator" class="text-xl">+</span>
-                    </button>
-                    <div id="basic-services" class="hidden transition-all duration-300 overflow-hidden">
-                        <div class="bg-blueline-lightgray p-2">
-                            <p class="text-sm"><span class="mr-2">✓</span>Klanttevredenheids-onderzoek</p>
-                        </div>
-                    </div>
-                    <button class="w-full bg-blueline text-white p-2 flex justify-between items-center" onclick="toggleCollapse('basic-rapportages')">
-                        <span>Rapportages</span>
-                        <span id="basic-rapportages-indicator" class="text-xl">+</span>
-                    </button>
-                    <div id="basic-rapportages" class="hidden transition-all duration-300 overflow-hidden">
-                        <div class="bg-blueline-lightgray p-2">
-                            <p class="text-sm"><span class="mr-2">✓</span>Standaard rapportage / maand</p>
-                        </div>
-                    </div>
-                    <button class="w-full bg-blueline text-white p-2 flex justify-between items-center" onclick="toggleCollapse('basic-addons')">
-                        <span>Add-ons</span>
-                        <span id="basic-addons-indicator" class="text-xl">+</span>
-                    </button>
-                    <div id="basic-addons" class="hidden transition-all duration-300 overflow-hidden">
-                        <div class="bg-blueline-lightgray p-2">
-                            <p class="text-sm"><span class="mr-2">✓</span>Customised portaal</p>
-                        </div>
-                    </div>
+                    <!-- <div class="p-2 mb-4 text-sm text-blueline rounded-lg bg-blue-50/80" role="alert">
+                        <span class="font-bold">Tijdelijk:</span><br/>eerste 100 tickets / maand gratis!
+                    </div> -->
 
-                    <button class="w-full border-2 border-blueline text-blueline hover:bg-blueline hover:text-white px-6 py-3 rounded-b-lg font-medium transition-colors">
-                        Kies Basic
+                    <button class="w-full border-2 border-blueline text-blueline hover:bg-blueline hover:text-white px-6 py-3 rounded font-medium transition-colors">
+                        Kies voor Essentials
                     </button>
                 </div>
 
                 <!-- Growth Plan -->
-                <div id="growth-plan" class="bg-white rounded-lg shadow-lg p-8 relative" data-monthly-price="499" data-yearly-price="224">
+                <div id="growth-plan" class="bg-blue-50/40 rounded-lg shadow-lg p-8 relative" data-monthly-price="1199" data-yearly-price="1079">
                     <div class="absolute top-0 right-0 bg-blue-600 text-white px-4 py-1 rounded-tr-lg rounded-bl-lg text-sm">
                         Meest gekozen
                     </div>
-                    <h3 class="text-xl font-bold mb-4">Growth</h3>
+                    <h3 class="text-xl font-bold mb-4">Customer Care:<br><span class="bg-blue-100/50 px-2">Growth</span></h3>
                     <section class="min-h-[250px]">
-                        <div id="basic-price" class="mb-6">
-                            <span class="text-4xl font-bold">€499</span>
-                            <span class="text-blueline-gray">/maand</span>
-                        </div>
-                        <div class="p-2 mb-4 text-sm text-blueline rounded-lg bg-blue-50/80" role="alert">
-                            <span class="font-bold">Tijdelijk:</span><br/>1e maand 10% korting!
-                        </div>
-                        <p class="text-blueline-gray mb-6">Essentiele oplossingen voor jouw klantenservice</p>
+                        <p class="text-blueline-gray mb-6">
+                            Voor bedrijven die meerdere communicatiekanalen willen benutten om hun klanten beter te bedienen. Dit pakket combineert professionele ondersteuning met strategisch advies en gedetailleerde rapportages.
+                        </p>
                     </section>
-                    <button class="w-full bg-blueline text-white p-2 flex justify-between items-center rounded-t-lg" onclick="toggleCollapse('growth-kanalen')">
-                        <span>Kanalen</span>
-                        <span id="growth-kanalen-indicator" class="text-xl">+</span>
-                    </button>
-                    <div id="growth-kanalen" class="hidden transition-all duration-300 overflow-hidden">
-                        <div class="bg-blueline-lightgray p-2">
-                            <p class="text-sm"><span class="mr-2">✓</span>E-mail</p>
-                            <p class="text-sm"><span class="mr-2">✓</span>Webformulier</p>
-                            <p class="text-sm"><span class="mr-2">✓</span>Facebook Messenger</p>
-                        </div>
-                    </div>
-                    <button class="w-full bg-blueline text-white p-2 flex justify-between items-center" onclick="toggleCollapse('growth-integraties')">
-                        <span>Integraties</span>
-                        <span id="growth-integraties-indicator" class="text-xl">+</span>
-                    </button>
-                    <div id="growth-integraties" class="hidden transition-all duration-300 overflow-hidden">
-                        <div class="bg-blueline-lightgray p-2">
-                            <p class="text-sm"><span class="mr-2">✓</span>API</p>
-                            <p class="text-sm"><span class="mr-2">✓</span>Shopify</p>
-                            <p class="text-sm"><span class="mr-2">✓</span>Woocommerce</p>
-                            <p class="text-sm"><span class="mr-2">✓</span>Google apps</p>
-                        </div>
-                    </div>
-                    <button class="w-full bg-blueline text-white p-2 flex justify-between items-center" onclick="toggleCollapse('growth-services')">
-                        <span>Services</span>
-                        <span id="growth-services-indicator" class="text-xl">+</span>
-                    </button>
-                    <div id="growth-services" class="hidden transition-all duration-300 overflow-hidden">
-                        <div class="bg-blueline-lightgray p-2">
-                            <p class="text-sm"><span class="mr-2">✓</span>Klanttevredenheids-onderzoek</p>
-                        </div>
-                    </div>
-                    <button class="w-full bg-blueline text-white p-2 flex justify-between items-center" onclick="toggleCollapse('growth-rapportages')">
-                        <span>Rapportages</span>
-                        <span id="growth-rapportages-indicator" class="text-xl">+</span>
-                    </button>
-                    <div id="growth-rapportages" class="hidden transition-all duration-300 overflow-hidden">
-                        <div class="bg-blueline-lightgray p-2">
-                            <p class="text-sm"><span class="mr-2">✓</span>Standaard rapportage / maand</p>
-                        </div>
-                    </div>
-                    <button class="w-full bg-blueline text-white p-2 flex justify-between items-center" onclick="toggleCollapse('growth-addons')">
-                        <span>Add-ons</span>
-                        <span id="growth-addons-indicator" class="text-xl">+</span>
-                    </button>
-                    <div id="growth-addons" class="hidden transition-all duration-300 overflow-hidden">
-                        <div class="bg-blueline-lightgray p-2">
-                            <p class="text-sm"><span class="mr-2">✓</span>Customised portaal</p>
-                            <p class="text-sm"><span class="mr-2">✓</span>Chatbot</p>
-                            <p class="text-sm"><span class="mr-2">✓</span>Analyse van de beste klanten</p>
-                            <p class="text-sm"><span class="mr-2">✓</span>Proactief campagnetrajecten</p>
-                        </div>
+                    <section class="bg-blue-50/80 p-2 rounded-lg mb-6 text-sm">
+                        <strong>Kanalen:</strong>
+                        <ul class="mb-2">
+                            <li class="list-disc ml-4">E-mail</li>
+                            <li class="list-disc ml-4">Webchat</li>
+                            <li class="list-disc ml-4">Facebook Messenger</li>
+                        </ul>
+                        <strong>Specificaties:</strong>
+                        <ul class="mb-2">
+                            <li class="list-disc ml-4">Volume: Tot 750 klantenserviceverzoeken per maand</li>
+                            <li class="list-disc ml-4">Extra tickets: €2,50 per extra ticket boven de 750</li>
+                        </ul>
+                        <strong>Inbegrepen diensten:</strong>
+                        <ul class="mb-2">
+                            <li class="list-disc ml-4">Beantwoorden van klantvragen:<br>
+                                <em>Ondersteuning via e-mail, webchat en Facebook Messenger.</em>
+                            </li>
+                            <li class="list-disc ml-4">Rapportage:<br>
+                                <em>Wekelijkse samenvatting van klantinteracties, prestaties en trends.</em>
+                            </li>
+                            <li class="list-disc ml-4">Klanttevredenheidsonderzoek (CSAT):<br>
+                                <em>Periodieke klanttevredenheidsmetingen om verbeterpunten te signaleren.</em>
+                            </li>
+                            <li class="list-disc ml-4">Periodieke adviesgesprekken:<br>
+                                <em>Maandelijkse evaluaties met suggesties om de klantenservice verder te verbeteren.</em>
+                            </li>
+                        </ul>
+                    </section>
+                    <div id="growth-price" class="mb-6">
+                        <span class="text-4xl font-bold">€1.199</span>
+                        <span class="text-blueline-gray">/maand</span>
                     </div>
 
-                    <button class="w-full border-2 border-blueline text-white bg-blueline hover:bg-blueline-light px-6 py-3 rounded-b-lg font-medium transition-colors">
-                        Kies Growth
+                    <button class="w-full border-2 border-blueline text-white bg-blueline hover:bg-blueline-dark hover:border-blueline-dark px-6 py-3 rounded font-medium transition-colors">
+                        Kies voor Growth
                     </button>
                 </div>
 
                 <!-- Professional Plan -->
-                <div id="professional-plan" class="bg-white rounded-lg shadow-lg p-8" data-monthly-price="799" data-yearly-price="639">
-                    <h3 class="text-xl font-bold mb-4">Professional</h3>
+                <div id="professional-plan" class="bg-white rounded-lg shadow-lg p-8" data-monthly-price="2499" data-yearly-price="2249">
+                    <h3 class="text-xl font-bold mb-4">Customer Care:<br><span class="bg-blue-100/50 px-2">Professional</span></h3>
                     <section class="min-h-[250px]">
-                        <div id="basic-price" class="mb-6">
-                            <span class="text-4xl font-bold">€799</span>
-                            <span class="text-blueline-gray">/maand</span>
-                        </div>
-                        <div class="p-2 mb-4 text-sm text-blueline rounded-lg bg-blue-50/80" role="alert">
-                            <span class="font-bold">Tijdelijk:</span><br/>1e maand 10% korting!
-                        </div>
-                        <p class="text-blueline-gray mb-6">Voor groeiende bedrijven.</p>
+                        <p class="text-blueline-gray mb-6">
+                            Voor bedrijven die streven naar een geavanceerde klantenservice met integratie van technologie en uitgebreide rapportages. Dit pakket biedt ondersteuning via meerdere kanalen, inclusief Instagram, en bevat automatiseringsopties.
+                        </p>
                     </section>
-                    <button class="w-full bg-blueline text-white p-2 flex justify-between items-center rounded-t-lg" onclick="toggleCollapse('professional-kanalen')">
-                        <span>Kanalen</span>
-                        <span id="professional-kanalen-indicator" class="text-xl">+</span>
-                    </button>
-                    <div id="professional-kanalen" class="hidden transition-all duration-300 overflow-hidden">
-                        <div class="bg-blueline-lightgray p-2">
-                            <p class="text-sm"><span class="mr-2">✓</span>E-mail</p>
-                            <p class="text-sm"><span class="mr-2">✓</span>Webformulier</p>
-                            <p class="text-sm"><span class="mr-2">✓</span>Facebook Messenger</p>
-                            <p class="text-sm"><span class="mr-2">✓</span>Live chat</p>
-                            <p class="text-sm"><span class="mr-2">✓</span>Slack</p>
-                            <p class="text-sm"><span class="mr-2">✓</span>Chatbot</p>
-                        </div>
-                    </div>
-                    <button class="w-full bg-blueline text-white p-2 flex justify-between items-center" onclick="toggleCollapse('professional-integraties')">
-                        <span>Integraties</span>
-                        <span id="professional-integraties-indicator" class="text-xl">+</span>
-                    </button>
-                    <div id="professional-integraties" class="hidden transition-all duration-300 overflow-hidden">
-                        <div class="bg-blueline-lightgray p-2">
-                            <p class="text-sm"><span class="mr-2">✓</span>API</p>
-                            <p class="text-sm"><span class="mr-2">✓</span>Shopify</p>
-                            <p class="text-sm"><span class="mr-2">✓</span>Woocommerce</p>
-                            <p class="text-sm"><span class="mr-2">✓</span>Google apps</p>
-                            <p class="text-sm"><span class="mr-2">✓</span>Salesforce</p>
-                            <p class="text-sm"><span class="mr-2">✓</span>Amazon</p>
-                            <p class="text-sm"><span class="mr-2">✓</span>Kennisbank</p>
-                        </div>
-                    </div>
-                    <button class="w-full bg-blueline text-white p-2 flex justify-between items-center" onclick="toggleCollapse('professional-services')">
-                        <span>Services</span>
-                        <span id="professional-services-indicator" class="text-xl">+</span>
-                    </button>
-                    <div id="professional-services" class="hidden transition-all duration-300 overflow-hidden">
-                        <div class="bg-blueline-lightgray p-2">
-                            <p class="text-sm"><span class="mr-2">✓</span>Klanttevredenheids-onderzoek</p>
-                            <p class="text-sm"><span class="mr-2">✓</span>E-mail klantcampagne</p>
-                        </div>
-                    </div>
-                    <button class="w-full bg-blueline text-white p-2 flex justify-between items-center" onclick="toggleCollapse('professional-rapportages')">
-                        <span>Rapportages</span>
-                        <span id="professional-rapportages-indicator" class="text-xl">+</span>
-                    </button>
-                    <div id="professional-rapportages" class="hidden transition-all duration-300 overflow-hidden">
-                        <div class="bg-blueline-lightgray p-2">
-                            <p class="text-sm"><span class="mr-2">✓</span>Standaard rapportage / maand</p>
-                        </div>
-                    </div>
-                    <button class="w-full bg-blueline text-white p-2 flex justify-between items-center" onclick="toggleCollapse('professional-addons')">
-                        <span>Add-ons</span>
-                        <span id="professional-addons-indicator" class="text-xl">+</span>
-                    </button>
-                    <div id="professional-addons" class="hidden transition-all duration-300 overflow-hidden">
-                        <div class="bg-blueline-lightgray p-2">
-                            <p class="text-sm"><span class="mr-2">✓</span>Customised portaal</p>
-                            <p class="text-sm"><span class="mr-2">✓</span>AI chatbot / emailbot</p>
-                            <p class="text-sm"><span class="mr-2">✓</span>Analyse van de beste klanten</p>
-                            <p class="text-sm"><span class="mr-2">✓</span>Proactief campagnetrajecten</p>
-                            <p class="text-sm"><span class="mr-2">✓</span>Whatsapp klantcampagne</p>
-                            <p class="text-sm"><span class="mr-2">✓</span>SMS klantcampagne</p>
-                            <p class="text-sm"><span class="mr-2">✓</span>Detail analyse ticketrapport</p>
-                            <p class="text-sm"><span class="mr-2">✓</span>Meertalige ondersteuning</p>
-                            <p class="text-sm"><span class="mr-2">✓</span>Telefoon</p>
-                        </div>
+                    <section class="bg-blue-50/80 p-2 rounded-lg mb-6 text-sm">
+                        <strong>Kanalen:</strong>
+                        <ul class="mb-2">
+                            <li class="list-disc ml-4">E-mail</li>
+                            <li class="list-disc ml-4">Live chat</li>
+                            <li class="list-disc ml-4">Facebook Messenger</li>
+                            <li class="list-disc ml-4">Instagram</li>
+                        </ul>
+                        <strong>Specificaties:</strong>
+                        <ul class="mb-2">
+                            <li class="list-disc ml-4">Volume: Tot 1.000 klantenserviceverzoeken per maand</li>
+                            <li class="list-disc ml-4">Extra tickets: €2 per extra ticket boven de 1.000</li>
+                        </ul>
+                        <strong>Inbegrepen diensten:</strong>
+                        <ul class="mb-2">
+                            <li class="list-disc ml-4">Omnichannel ondersteuning:<br>
+                                <em>Volledige dekking op bovengenoemde kanalen.</em>
+                            </li>
+                            <li class="list-disc ml-4">Integratie van AI-chatbot:<br>
+                                <em>Automatische antwoorden op veelgestelde vragen, waardoor agenten zich kunnen richten op complexere verzoeken.</em>
+                            </li>
+                            <li class="list-disc ml-4">Maandelijkse diepgaande rapportage:<br>
+                                <em>Analyse van KPI's, klanttevredenheidsscores en strategisch advies.</em>
+                            </li>
+                            <li class="list-disc ml-4">Zelfserviceportaal:<br>
+                                <em>Toegang tot een kennisbank en portaal waar klanten zelf antwoorden kunnen vinden op veelgestelde vragen.<br>
+                                Inclusief onderhoud en maandelijkse updates van de content.</em>
+                            </li>
+                        </ul>
+                    </section>
+                    
+                    <div id="professional-price" class="mb-6">
+                        <span class="text-4xl font-bold">€2.499</span>
+                        <span class="text-blueline-gray">/maand</span>
                     </div>
 
-                    <button class="w-full border-2 border-blueline text-blueline hover:bg-blueline hover:text-white px-6 py-3 rounded-b-lg font-medium transition-colors">
+                    <button class="w-full border-2 border-blueline text-blueline hover:bg-blueline hover:text-white px-6 py-3 rounded font-medium transition-colors">
                         Kies Professional
                     </button>
                 </div>
 
                 <!-- Enterprise Plan -->
-                <div id="enterprise-partner-plan" class="bg-white rounded-lg shadow-lg p-8" data-monthly-price="Let's Talk" data-yearly-price="Let's Talk">
-                    <h3 class="text-xl font-bold mb-4">Enterprise</h3>
+                <div id="enterprise-partner-plan" class="bg-white rounded-lg shadow-lg p-8" data-monthly-price="vanaf €3.499" data-yearly-price="vanaf €3.149">
+                    <h3 class="text-xl font-bold mb-4">Customer Care:<br><span class="bg-blue-100/50 px-2">Enterprise</span></h3>
                     <section class="min-h-[250px]">
-                        <div id="basic-price" class="mb-6">
-                            <span class="text-4xl font-bold">€799</span>
-                            <span class="text-blueline-gray">/maand</span>
-                        </div>
-                        <div class="p-2 mb-4 text-sm text-blueline rounded-lg bg-blue-50/80 hidden" role="alert">
-                            <span class="font-bold">Tijdelijk:</span><br/>&nbsp;
-                        </div>
-                        <p class="text-blueline-gray mb-6">Full-service oplossingen, inclusief proactieve ondersteuning.</p>
+                        <p class="text-blueline-gray mb-6">
+                            Voor bedrijven met unieke behoeften die volledige maatwerkoplossingen vereisen. Dit exclusieve pakket biedt premium klantenservice, naadloze integraties en strategische ondersteuning.
+                        </p>
                     </section>
-                    <button class="w-full bg-blueline text-white p-2 flex justify-between items-center rounded-t-lg" onclick="toggleCollapse('enterprise-kanalen')">
-                        <span>Kanalen</span>
-                        <span id="enterprise-kanalen-indicator" class="text-xl">+</span>
-                    </button>
-                    <div id="enterprise-kanalen" class="hidden transition-all duration-300 overflow-hidden">
-                        <div class="bg-blueline-lightgray p-2">
-                            <p class="text-sm"><span class="mr-2">✓</span>E-mail</p>
-                            <p class="text-sm"><span class="mr-2">✓</span>Webformulier</p>
-                            <p class="text-sm"><span class="mr-2">✓</span>Facebook Messenger</p>
-                            <p class="text-sm"><span class="mr-2">✓</span>Live chat</p>
-                            <p class="text-sm"><span class="mr-2">✓</span>Slack</p>
-                            <p class="text-sm"><span class="mr-2">✓</span>Chatbot</p>
-                            <p class="text-sm"><span class="mr-2">✓</span>Google's Business Messages</p>
-                            <p class="text-sm"><span class="mr-2">✓</span>SMS</p>
-                            <p class="text-sm"><span class="mr-2">✓</span>WhatsApp</p>
-                            <p class="text-sm"><span class="mr-2">✓</span>Instagram</p>
-                            <p class="text-sm"><span class="mr-2">✓</span>Telefoon</p>
-                            <p class="text-sm"><span class="mr-2">✓</span>Meertalige ondersteuning</p>
-                        </div>
-                    </div>
-                    <button class="w-full bg-blueline text-white p-2 flex justify-between items-center" onclick="toggleCollapse('enterprise-integraties')">
-                        <span>Integraties</span>
-                        <span id="enterprise-integraties-indicator" class="text-xl">+</span>
-                    </button>
-                    <div id="enterprise-integraties" class="hidden transition-all duration-300 overflow-hidden">
-                        <div class="bg-blueline-lightgray p-2">
-                            <p class="text-sm"><span class="mr-2">✓</span>API</p>
-                            <p class="text-sm"><span class="mr-2">✓</span>Shopify</p>
-                            <p class="text-sm"><span class="mr-2">✓</span>Woocommerce</p>
-                            <p class="text-sm"><span class="mr-2">✓</span>Google apps</p>
-                            <p class="text-sm"><span class="mr-2">✓</span>Salesforce</p>
-                            <p class="text-sm"><span class="mr-2">✓</span>Amazon</p>
-                            <p class="text-sm"><span class="mr-2">✓</span>Kennisbank</p>
-                            <p class="text-sm"><span class="mr-2">✓</span>Custom portal</p>
-                        </div>
-                    </div>
-                    <button class="w-full bg-blueline text-white p-2 flex justify-between items-center" onclick="toggleCollapse('enterprise-services')">
-                        <span>Services</span>
-                        <span id="enterprise-services-indicator" class="text-xl">+</span>
-                    </button>
-                    <div id="enterprise-services" class="hidden transition-all duration-300 overflow-hidden">
-                        <div class="bg-blueline-lightgray p-2">
-                            <p class="text-sm"><span class="mr-2">✓</span>Klanttevredenheids-onderzoek</p>
-                            <p class="text-sm"><span class="mr-2">✓</span>E-mail klantcampagne</p>
-                        </div>
-                    </div>
-                    <button class="w-full bg-blueline text-white p-2 flex justify-between items-center" onclick="toggleCollapse('enterprise-rapportages')">
-                        <span>Rapportages</span>
-                        <span id="enterprise-rapportages-indicator" class="text-xl">+</span>
-                    </button>
-                    <div id="enterprise-rapportages" class="hidden transition-all duration-300 overflow-hidden">
-                        <div class="bg-blueline-lightgray p-2">
-                            <p class="text-sm"><span class="mr-2">✓</span>Custom rapportage / week</p>
-                            <p class="text-sm"><span class="mr-2">✓</span>Detail analyse ticketrapport</p>
-                            <p class="text-sm"><span class="mr-2">✓</span>Analyse van de beste klanten</p>
-                        </div>
-                    </div>
-                    <button class="w-full bg-blueline text-white p-2 flex justify-between items-center" onclick="toggleCollapse('enterprise-addons')">
-                        <span>Add-ons</span>
-                        <span id="enterprise-addons-indicator" class="text-xl">+</span>
-                    </button>
-                    <div id="enterprise-addons" class="hidden transition-all duration-300 overflow-hidden">
-                        <div class="bg-blueline-lightgray p-2">
-                            <p class="text-sm"><span class="mr-2">✓</span>AI chatbot / emailbot</p>
-                            <p class="text-sm"><span class="mr-2">✓</span>Whatsapp klantcampagne</p>
-                            <p class="text-sm"><span class="mr-2">✓</span>SMS klantcampagne</p>
-                        </div>
+                    <section class="bg-blue-50/80 p-2 rounded-lg mb-6 text-sm">
+                        <strong>Kanalen:</strong>
+                        <ul class="mb-2">
+                            <li class="list-disc ml-4">Live chat</li>
+                            <li class="list-disc ml-4">WhatsApp</li>
+                            <li class="list-disc ml-4">Social media</li>
+                            <li class="list-disc ml-4">Andere kanalen in overleg</li>
+                        </ul>
+                        <strong>Specificaties:</strong>
+                        <ul class="mb-2">
+                            <li class="list-disc ml-4">Volume: Wordt vastgesteld op basis van de overeengekomen servicebehoeften</li>
+                            <li class="list-disc ml-4">Prijs: Afhankelijk van de complexiteit en omvang van de dienstverlening</li>
+                        </ul>
+                        <strong>Inbegrepen diensten:</strong>
+                        <ul class="mb-2">
+                            <li class="list-disc ml-4">Maatwerkadvies en -rapportages:<br>
+                                <em>Geavanceerde analyses en strategisch advies afgestemd op specifieke bedrijfsdoelen.</em>
+                            </li>
+                            <li class="list-disc ml-4">Integratie van systemen:<br>
+                                <em>Koppeling met platforms zoals Salesforce, Amazon en andere e-commerce tools.</em>
+                            </li>
+                            <li class="list-disc ml-4">Dedicated accountmanager:<br>
+                                <em>Een persoonlijke accountmanager die fungeert als je directe contactpersoon.</em>
+                            </li>
+                            <li class="list-disc ml-4">Exclusieve training:<br>
+                                <em>Training voor interne medewerkers over het gebruik van het klantenportaal.</em>
+                            </li>
+                            <li class="list-disc ml-4">Volledig aanpasbaar Zelfserviceportaal:<br>
+                                <em>Geavanceerd kennisbankbeheer, volledig afgestemd op jouw specifieke bedrijfsprocessen en branding.<br>
+                                Inclusief regelmatige contentupdates en KPI-monitoring van portalgebruik.</em>
+                            </li>
+                        </ul>
+                    </section>
+
+                    <div id="enterprise-price" class="mb-6">
+                        <span class="text-4xl font-bold">€3.499</span>
+                        <span class="text-blueline-gray">/maand</span>
                     </div>
 
-                    <button class="w-full border-2 border-blueline text-blueline hover:bg-blueline hover:text-white px-6 py-3 rounded-b-lg font-medium transition-colors">
+                    <button class="w-full border-2 border-blueline text-blueline hover:bg-blueline hover:text-white px-6 py-3 rounded font-medium transition-colors">
                         Kies Enterprise
                     </button>
                 </div>
@@ -398,7 +279,7 @@
                     const price = option === 'monthly' ? parseInt(monthlyPrice) : parseInt(yearlyPrice);
                     priceDiv.innerHTML = `
                         <span class="text-4xl font-bold">€${price}</span>
-                        <span class="text-blueline-gray">/${option === 'monthly' ? 'maand' : 'maand/jaar'}${plan.id === 'basic-plan' && option === 'monthly' ? '<br/>+ €2 / ticket' : ''}</span>
+                        <span class="text-blueline-gray">/${option === 'monthly' ? 'maand' : 'maand/jaar'}</span>
                     `;
                 } else {
                     priceDiv.innerHTML = `
@@ -411,6 +292,103 @@
         // Initialize prices on page load
         changePrice('monthly');
     </script>
+
+    <!-- Add-ons Section -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold mb-4">Add-ons</h2>
+                <p class="text-blueline-gray">Breid je pakket uit met extra functionaliteiten</p>
+            </div>
+
+            <div class="overflow-x-auto">
+                <table class="w-full border-collapse">
+                    <thead>
+                        <tr class="bg-blueline-lightgray">
+                            <th class="px-6 py-4 text-left border-b border-gray-200">Add-on</th>
+                            <th class="px-6 py-4 text-left border-b border-gray-200">Omschrijving</th>
+                            <th class="px-6 py-4 text-right border-b border-gray-200">Prijs</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="border-b border-gray-200 hover:bg-blueline-lightgray transition-colors duration-200">
+                            <td class="px-6 py-4">Buiten kantooruren ondersteuning</td>
+                            <td class="px-6 py-4 text-blueline-gray">Verhoog de beschikbaarheid van je klantenservice buiten reguliere werkuren (avond en weekend)</td>
+                            <td class="px-6 py-4 text-right">€300 /maand</td>
+                        </tr>
+                        <tr class="border-b border-gray-200 hover:bg-blueline-lightgray transition-colors duration-200">
+                            <td class="px-6 py-4">Meertalige ondersteuning</td>
+                            <td class="px-6 py-4 text-blueline-gray">Inclusief vertaling van antwoordscripts en training van agents</td>
+                            <td class="px-6 py-4 text-right">€200 /taal/maand</td>
+                        </tr>
+                        <tr class="border-b border-gray-200 hover:bg-blueline-lightgray transition-colors duration-200">
+                            <td class="px-6 py-4">Dedicated agent</td>
+                            <td class="px-6 py-4 text-blueline-gray">Een vaste agent die volledig op jouw account is gericht</td>
+                            <td class="px-6 py-4 text-right">€1.000 /maand/agent</td>
+                        </tr>
+                        <tr class="border-b border-gray-200 hover:bg-blueline-lightgray transition-colors duration-200">
+                            <td class="px-6 py-4">Extra rapportages op maat</td>
+                            <td class="px-6 py-4 text-blueline-gray">Ontvang extra rapportages afgestemd op specifieke KPI's of bedrijfsdoelstellingen</td>
+                            <td class="px-6 py-4 text-right">€150 /rapport</td>
+                        </tr>
+                        <tr class="border-b border-gray-200 hover:bg-blueline-lightgray transition-colors duration-200">
+                            <td class="px-6 py-4">E-commerce integraties</td>
+                            <td class="px-6 py-4 text-blueline-gray">Koppelingen met Shopify, WooCommerce, of andere platforms</td>
+                            <td class="px-6 py-4 text-right">€500 eenmalig</td>
+                        </tr>
+                        <tr class="border-b border-gray-200 hover:bg-blueline-lightgray transition-colors duration-200">
+                            <td class="px-6 py-4">Proactieve klantenservice</td>
+                            <td class="px-6 py-4 text-blueline-gray">Automatische triggers en klantbenaderingen op basis van gedrag of eerdere interacties</td>
+                            <td class="px-6 py-4 text-right">€250 /maand</td>
+                        </tr>
+                        <tr class="border-b border-gray-200 hover:bg-blueline-lightgray transition-colors duration-200">
+                            <td class="px-6 py-4">AI-chatbot training</td>
+                            <td class="px-6 py-4 text-blueline-gray">Specifieke training en configuratie van een AI-chatbot op maat voor jouw bedrijfsbehoeften</td>
+                            <td class="px-6 py-4 text-right">€800 eenmalig</td>
+                        </tr>
+                        <tr class="border-b border-gray-200 hover:bg-blueline-lightgray transition-colors duration-200">
+                            <td class="px-6 py-4">Social Media monitoring</td>
+                            <td class="px-6 py-4 text-blueline-gray">Monitoring en directe respons op sociale mediakanalen (bijv. Instagram, Twitter)</td>
+                            <td class="px-6 py-4 text-right">€300 /maand</td>
+                        </tr>
+                        <tr class="border-b border-gray-200 hover:bg-blueline-lightgray transition-colors duration-200">
+                            <td class="px-6 py-4">Incidentmanagement</td>
+                            <td class="px-6 py-4 text-blueline-gray">Directe aanpak van kritieke issues met gespecialiseerde ondersteuning</td>
+                            <td class="px-6 py-4 text-right">€400 /maand</td>
+                        </tr>
+                        <tr class="border-b border-gray-200 hover:bg-blueline-lightgray transition-colors duration-200">
+                            <td class="px-6 py-4">Training klantenserviceteam</td>
+                            <td class="px-6 py-4 text-blueline-gray">Training van jouw interne team in het optimaliseren van klantenserviceprocessen</td>
+                            <td class="px-6 py-4 text-right">€500 /sessie</td>
+                        </tr>
+                        <tr class="border-b border-gray-200 hover:bg-blueline-lightgray transition-colors duration-200">
+                            <td class="px-6 py-4">Zelfserviceportaal en kennisbank</td>
+                            <td class="px-6 py-4 text-blueline-gray">Basiskennisbank met veelgestelde vragen en instructies, inclusief regelmatige updates<br>
+                                Uitbreiding: €150 eenmalig per aanvullende categorie of diepgaande contentpagina.</td>
+                            <td class="px-6 py-4 text-right">€250 /maand</td>
+                        </tr>
+                        <tr class="border-b border-gray-200 hover:bg-blueline-lightgray transition-colors duration-200">
+                            <td class="px-6 py-4">Telefonische ondersteuning (basis)</td>
+                            <td class="px-6 py-4 text-blueline-gray">Telefonische ondersteuning binnen kantoortijden, tot 100 gesprekken per maand<br>
+                                (Tot 100 gesprekken per maand; Meerprijs: €3 per extra gesprek boven de limiet)</td>
+                            <td class="px-6 py-4 text-right">€400 /maand</td>
+                        </tr>
+                        <tr class="border-b border-gray-200 hover:bg-blueline-lightgray transition-colors duration-200">
+                            <td class="px-6 py-4">Telefonische ondersteuning (premium)</td>
+                            <td class="px-6 py-4 text-blueline-gray">Telefonische ondersteuning binnen kantoortijden, tot 200 gesprekken per maand<br>
+                                (Tot 200 gesprekken per maand; Meerprijs: €2,5 per extra gesprek boven de limiet)<br>
+                                Inclusief:<br>
+                                -	Dedicated agent voor telefonische ondersteuning.<br>
+                                -	Maandelijkse rapportages over gesprekskwaliteit en klanttevredenheid.
+                                </td>
+                            <td class="px-6 py-4 text-right">€750 /maand</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
 
     <!-- Stats -->
     <section class="bg-blueline-dark py-24 sm:py-32">
@@ -601,7 +579,7 @@
         <div class="container mx-auto px-4">
             <div class="grid md:grid-cols-3 gap-8">
                 <div>
-                    <h3 class="text-xl font-bold mb-4">Blueline CCS</h3>
+                    <h3 class="text-xl font-bold mb-4">Blueline Customer Care</h3>
                     <p class="text-gray-400">Jouw klanten, onze zorg</p>
                 </div>
                 <div>

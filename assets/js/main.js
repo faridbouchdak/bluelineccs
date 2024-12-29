@@ -53,17 +53,3 @@ const script = document.createElement('script');
 script.src = '//eu.fw-cdn.com/12945358/902902.js';
 script.setAttribute('chat', 'true');
 document.body.appendChild(script);
-
-// Collapse elements
-function toggleCollapse(id) {
-  const element = document.getElementById(id);
-  const indicator = document.getElementById(id + '-indicator');
-  
-  element.classList.toggle('hidden');
-  
-  if (element.classList.contains('hidden')) {
-    indicator.textContent = '+';
-  } else {
-    indicator.textContent = '-';
-  }
-}
