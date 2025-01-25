@@ -588,6 +588,9 @@ video {
 .order-first {
   order: -9999;
 }
+.m-6 {
+  margin: 1.5rem;
+}
 .mx-auto {
   margin-left: auto;
   margin-right: auto;
@@ -599,6 +602,10 @@ video {
 .my-4 {
   margin-top: 1rem;
   margin-bottom: 1rem;
+}
+.my-6 {
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
 }
 .mb-1 {
   margin-bottom: 0.25rem;
@@ -1201,6 +1208,10 @@ video {
 }
 .tracking-tight {
   letter-spacing: -0.025em;
+}
+.text-blue-50 {
+  --tw-text-opacity: 1;
+  color: rgb(239 246 255 / var(--tw-text-opacity));
 }
 .text-blueline {
   --tw-text-opacity: 1;
