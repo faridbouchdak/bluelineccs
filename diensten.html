@@ -3,7 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Diensten & Oplossingen - Blueline Customer Care</title>
+    <title>Diensten & Oplossingen - Blueline Customer Care Solutions</title>
+    <meta name="description" content="Ontdek onze klantenservice features: omnichannel support, AI-integratie, kennisbank, realtime rapportages en naadloze e-commerce integraties. Verhoog je klanttevredenheid!" />
+    <meta name="keywords" content="klantenservice features, omnichannel support, AI klantenservice, kennisbank, zelfservice portaal, klantenservice rapportages" />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://www.bluelineccs.nl/diensten.html" />
+
+    <!-- Social Media Tags -->
+    <meta property="og:title" content="Diensten & Oplossingen | Blueline Customer Care Solutions" />
+    <meta property="og:description" content="Verhoog je klanttevredenheid met onze complete klantenservice-oplossing: omnichannel support, AI-integratie en realtime inzichten." />
+    <meta property="og:image" content="https://www.bluelineccs.nl/assets/img/features-social-share.jpg" />
+    <meta property="og:url" content="https://www.bluelineccs.nl/diensten.html" />
+    <meta name="twitter:card" content="summary_large_image" />
+
 
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="/assets/img/favicons/favicon-96x96.png" sizes="96x96" />
@@ -12,8 +24,85 @@
     <link rel="apple-touch-icon" sizes="180x180" href="/assets/img/favicons/apple-touch-icon.png" />
     <link rel="manifest" href="/assets/img/favicons/site.webmanifest" />
 
+    <!-- preload assets -->
+    <link rel="preload" href="/assets/css/style.css" as="style">
+    <link rel="preload" href="/assets/img/features-omnichannel.png" as="image">
+
     <!-- stylesheet -->
     <link rel="stylesheet" href="assets/css/style.css">
+
+    <!-- Schema.org markup -->
+    <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@type": "Service",
+          "name": "Blueline Customer Care Features",
+          "provider": {
+            "@type": "Organization",
+            "name": "Blueline Customer Care Solutions",
+            "url": "https://www.bluelineccs.nl"
+          },
+          "serviceType": "Customer Service Solution",
+          "offers": {
+            "@type": "Offer",
+            "availability": "https://schema.org/InStock"
+          },
+          "hasOfferCatalog": {
+            "@type": "OfferCatalog",
+            "name": "Klantenservice Features",
+            "itemListElement": [
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Omnichannel ondersteuning",
+                  "description": "Geïntegreerde ondersteuning via live chat, e-mail, telefoon en social media"
+                }
+              },
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "E-commerce Integratie",
+                  "description": "Naadloze integratie met Shopify en WooCommerce platforms"
+                }
+              },
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "AI-integratie",
+                  "description": "Geavanceerde AI-technologie voor efficiënte klantenservice"
+                }
+              }
+            ]
+          }
+        }
+    </script>
+    
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [{
+        "@type": "Question",
+        "name": "Wat is omnichannel ondersteuning?",
+        "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Onze omnichannel oplossing zorgt ervoor dat klanten via elk kanaal (live chat, e-mail, telefoon, social media) geholpen worden, met behoud van conversatiecontext en klantgegevens."
+        }
+        },
+        {
+        "@type": "Question",
+        "name": "Hoe werkt de AI-integratie?",
+        "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "We gebruiken geavanceerde AI-technologie zoals chatbots en geautomatiseerde antwoorden voor snelle en efficiënte oplossingen, waarbij complexe verzoeken automatisch worden doorgestuurd naar medewerkers."
+        }
+        }]
+    }
+    </script>
+        
 </head>
 <body class="bg-white text-gray-900">
     <!-- Navigation -->
@@ -65,6 +154,19 @@
 
     <!-- Feature Sections -->
     <section class="py-20">
+        <!-- breadcrumbs -->
+        <!-- <nav class="container mx-auto px-4 py-2" aria-label="Breadcrumb">
+            <ol class="list-none p-0 inline-flex text-sm text-gray-600">
+                <li class="flex items-center">
+                    <a href="/" class="hover:text-blueline">Home</a>
+                    <svg class="w-3 h-3 mx-2" fill="currentColor" viewBox="0 0 20 20">
+                        <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"/>
+                    </svg>
+                </li>
+                <li>Features</li>
+            </ol>
+        </nav> -->
+
         <div class="container mx-auto px-4">
             <!-- Feature 1 -->
             <div class="flex flex-col md:flex-row items-center gap-12 mb-10">
@@ -75,7 +177,7 @@
                     </p>
                 </div>
                 <div class="flex-1">
-                    <img src="/assets/img/features omnichannel.png" alt="Omnichannel support" class="rounded-lg">
+                    <img src="/assets/img/features omnichannel.png" loading="lazy" alt="Omnichannel support" class="rounded-lg">
                 </div>
             </div>
             <!-- Feature 2 -->
@@ -87,7 +189,7 @@
                     </p>
                 </div>
                 <div class="flex-1">
-                    <img src="/assets/img/features integratie.jpg" alt="Integration with e-commerce" class="rounded-lg shadow-lg">
+                    <img src="/assets/img/features integratie.jpg" loading="lazy" alt="Integration with e-commerce" class="rounded-lg shadow-lg">
                 </div>
             </div>
             <!-- Feature 3 -->
@@ -99,7 +201,7 @@
                     </p>
                 </div>
                 <div class="flex-1">
-                    <img src="assets/img/features kennisbank zelfservice.png" alt="kb and zelfservice" class="rounded-lg">
+                    <img src="assets/img/features kennisbank zelfservice.png" loading="lazy" alt="kb and zelfservice" class="rounded-lg">
                 </div>
             </div>
             <!-- Feature 4 -->
@@ -112,7 +214,7 @@
                     </p>
                 </div>
                 <div class="flex-1">
-                    <img src="/assets/img/features ai integratie.png" alt="AI Support Feature" class="rounded-lg">
+                    <img src="/assets/img/features ai integratie.png" loading="lazy" alt="AI Support Feature" class="rounded-lg">
                 </div>
             </div>
             <!-- Feature 5 -->
@@ -124,7 +226,7 @@
                     </p>
                 </div>
                 <div class="flex-1">
-                    <img src="assets/img/features rapportages en analyses.jpg" alt="Realtime reports and analytics" class="rounded-lg shadow-lg">
+                    <img src="assets/img/features rapportages en analyses.jpg" loading="lazy" alt="Realtime reports and analytics" class="rounded-lg shadow-lg">
                 </div>
             </div>
         </div>

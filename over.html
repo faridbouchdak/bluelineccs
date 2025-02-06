@@ -3,7 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Over Ons - Blueline Customer Care</title>
+    <title>Over Blueline Customer Care Solutions | Innovatieve Klantenservice Oplossingen</title>
+
+    <meta name="description" content="Ontdek het verhaal achter Blueline Customer Care. Wij zijn gespecialiseerd in innovatieve klantenservice-oplossingen voor e-commerce bedrijven. Leer meer over onze missie, waarden en aanpak." />
+    <meta name="keywords" content="over ons, blueline customer care, klantenservice specialist, e-commerce support, bedrijfsmissie, klantenservice waarden" />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://www.bluelineccs.nl/over.html" />
+
+    <!-- Social Media Tags -->
+    <meta property="og:title" content="Over Blueline Customer Care Solutions | Innovatieve Klantenservice Oplossingen" />
+    <meta property="og:description" content="Ontdek hoe Blueline Customer Care e-commerce bedrijven helpt groeien met innovatieve klantenservice-oplossingen en persoonlijke aandacht." />
+    <meta property="og:image" content="https://www.bluelineccs.nl/assets/img/about-social-share.jpg" />
+    <meta property="og:url" content="https://www.bluelineccs.nl/over.html" />
+    <meta name="twitter:card" content="summary_large_image" />
 
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="/assets/img/favicons/favicon-96x96.png" sizes="96x96" />
@@ -12,8 +24,65 @@
     <link rel="apple-touch-icon" sizes="180x180" href="/assets/img/favicons/apple-touch-icon.png" />
     <link rel="manifest" href="/assets/img/favicons/site.webmanifest" />
 
+    <!-- preload assets -->
+    <link rel="preload" href="/assets/css/style.css" as="style">
+    <link rel="preload" href="/assets/img/bluelineccs.svg" as="image">
+
     <!-- stylesheet -->
     <link rel="stylesheet" href="assets/css/style.css">
+    
+    <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@type": "Organization",
+          "name": "Blueline Customer Care",
+          "url": "https://www.bluelineccs.nl",
+          "logo": "https://www.bluelineccs.nl/assets/img/bluelineccs.svg",
+          "description": "Specialist in innovatieve klantenservice-oplossingen voor e-commerce bedrijven",
+          "foundingDate": "2024",
+          "slogan": "Slimme oplossingen, persoonlijke aandacht",
+          "areaServed": "Netherlands",
+          "sameAs": [
+            "https://www.facebook.com/profile.php?id=61569635783562",
+            "https://www.instagram.com/bluelineccs/",
+            "https://www.linkedin.com/company/blueline-customer-care/"
+          ],
+          "member": {
+            "@type": "OrganizationRole",
+            "roleName": "Founder & CEO",
+            "description": "Oprichter met jarenlange ervaring in e-commerce en klantenservice"
+          }
+        }
+    </script>
+    
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://www.bluelineccs.nl/over.html"
+        },
+        "headline": "Over Blueline Customer Care Solution",
+        "description": "Blueline Customer Care Solutions helpt e-commerce bedrijven hun klantenservice naar een hoger niveau te tillen",
+        "image": "https://www.bluelineccs.nl/assets/img/about-hero.jpg",
+        "author": {
+        "@type": "Organization",
+        "name": "Blueline Customer Care"
+        },
+        "publisher": {
+        "@type": "Organization",
+        "name": "Blueline Customer Care Solutions",
+        "logo": {
+            "@type": "ImageObject",
+            "url": "https://www.bluelineccs.nl/assets/img/bluelineccs.svg"
+        }
+        },
+        "datePublished": "2024-01-01",
+        "dateModified": "2024-02-06"
+    }
+    </script>
+        
 </head>
 <body class="bg-white text-gray-900">
     <!-- Navigation -->
@@ -49,9 +118,22 @@
 
     <!-- Mission Section -->
     <section class="py-16">
+        <!-- breadcrumbs -->
+        <!-- <nav class="container mx-auto px-4 py-2" aria-label="Breadcrumb">
+            <ol class="list-none p-0 inline-flex text-sm text-gray-600">
+                <li class="flex items-center">
+                    <a href="/" class="hover:text-blueline">Home</a>
+                    <svg class="w-3 h-3 mx-2" fill="currentColor" viewBox="0 0 20 20">
+                        <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"/>
+                    </svg>
+                </li>
+                <li>Over Ons</li>
+            </ol>
+        </nav> -->
+
         <div class="max-w-7xl mx-auto px-4">
             <div class="grid md:grid-cols-2 gap-12 items-center">
-                <div>
+                <div aria-labelledby="mission-title">
                     <h2 class="text-3xl font-bold mb-2">Onze missie</h2>
                     <p class="text-blueline-gray mb-6">
                         Bij Blueline Customer Care geloven we in de kracht van klantenservice als motor voor succes. Onze missie is om e-commerce bedrijven te ondersteunen met innovatieve omnichannel oplossingen, zodat zij hun klanten snel, persoonlijk en effectief kunnen helpen. Sterke klantenservice is de sleutel tot duurzame groei in de e-commercewereld.
@@ -279,7 +361,7 @@
                 Benieuwd hoe we jouw klantenservice kunnen verbeteren? Neem vandaag nog contact met ons op en ontdek hoe Blueline Customer Care jouw bedrijf kan helpen groeien.
             </p>
 
-            <a href="/contact.html" class="inline-flex items-center justify-center bg-white hover:bg-gray-100 text-blueline-dark px-8 py-4 rounded-lg font-medium transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl">
+            <a href="/contact.html" aria-label="Plan een gratis adviesgesprek" class="inline-flex items-center justify-center bg-white hover:bg-gray-100 text-blueline-dark px-8 py-4 rounded-lg font-medium transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl">
                 Plan een gratis adviesgesprek in
                 <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-2" viewBox="0 0 20 20" fill="currentColor">
                     <path fill-rule="evenodd" d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd"/>

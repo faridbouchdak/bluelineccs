@@ -3,8 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact - Blueline Customer Care</title>
+    <title>Contact | Blueline Customer Care Solutions</title>
 
+    <meta name="description" content="Neem contact op met Blueline Customer Care Solutions. Bereikbaar via telefoon, WhatsApp, e-mail en live chat. Persoonlijke ondersteuning voor al je klantenservice vragen." />
+    <meta name="keywords" content="contact, klantenservice, helpdesk, support, contact opnemen, blueline customer care" />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://www.bluelineccs.nl/contact.html" />
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'">
+    <meta http-equiv="X-Frame-Options" content="SAMEORIGIN">
+
+    <!-- Social Media Tags -->
+    <meta property="og:title" content="Contact | Blueline Customer Care Solutions" />
+    <meta property="og:description" content="Direct contact via telefoon, WhatsApp, e-mail of live chat. Wij helpen je graag verder met al je klantenservice vragen." />
+    <meta property="og:image" content="https://www.bluelineccs.nl/assets/img/social-share.jpg" />
+    <meta property="og:url" content="https://www.bluelineccs.nl/contact.html" />
+    <meta name="twitter:card" content="summary_large_image" />
+    
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="/assets/img/favicons/favicon-96x96.png" sizes="96x96" />
     <link rel="icon" type="image/svg+xml" href="/assets/img/favicons/favicon.svg" />
@@ -12,8 +26,77 @@
     <link rel="apple-touch-icon" sizes="180x180" href="/assets/img/favicons/apple-touch-icon.png" />
     <link rel="manifest" href="/assets/img/favicons/site.webmanifest" />
 
+    <!-- preload assets -->
+    <link rel="preload" href="/assets/css/style.css" as="style">
+    <link rel="preload" href="/assets/img/bluelineccs.svg" as="image">
+
     <!-- stylesheet -->
     <link rel="stylesheet" href="assets/css/style.css">
+
+    <!-- Schema.org markup -->
+    <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@type": "ContactPage",
+          "mainEntity": {
+            "@type": "Organization",
+            "name": "Blueline Customer Care Solutions",
+            "url": "https://www.bluelineccs.nl",
+            "logo": "https://www.bluelineccs.nl/assets/img/bluelineccs.svg",
+            "contactPoint": [
+              {
+                "@type": "ContactPoint",
+                "telephone": "+31-85-7609912",
+                "contactType": "customer service",
+                "availableLanguage": ["Dutch", "English"],
+                "areaServed": "NL",
+                "hoursAvailable": {
+                  "@type": "OpeningHoursSpecification",
+                  "dayOfWeek": [
+                    "Monday",
+                    "Tuesday",
+                    "Wednesday",
+                    "Thursday",
+                    "Friday"
+                  ],
+                  "opens": "09:00",
+                  "closes": "17:00"
+                }
+              },
+              {
+                "@type": "ContactPoint",
+                "telephone": "+31-657577225",
+                "contactType": "customer support",
+                "contactOption": "WhatsApp",
+                "availableLanguage": ["Dutch", "English"]
+              }
+            ],
+            "address": {
+              "@type": "PostalAddress",
+              "addressCountry": "NL",
+              "email": "info@bluelineccs.nl"
+            }
+          }
+        }
+    </script>
+    
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [{
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://www.bluelineccs.nl"
+        },{
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Contact",
+        "item": "https://www.bluelineccs.nl/contact.html"
+        }]
+    }
+    </script>        
 </head>
 <body class="bg-white text-gray-900">
     <!-- Navigation -->
@@ -52,6 +135,20 @@
 
     <!-- Contact Options -->
     <section class="py-16">
+        <!-- breadcrumbs -->
+        <!-- <div class="container mx-auto px-4 py-2">
+            <nav class="text-gray-500 text-sm" aria-label="Breadcrumb">
+                <ol class="list-none p-0 inline-flex">
+                    <li class="flex items-center">
+                        <a href="/">Home</a>
+                        <svg class="fill-current w-3 h-3 mx-3" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
+                            <path d="M285.476 272.971L91.132 467.314c-9.373 9.373-24.569 9.373-33.941 0l-22.667-22.667c-9.357-9.357-9.375-24.522-.04-33.901L188.505 256 34.484 101.255c-9.335-9.379-9.317-24.544.04-33.901l22.667-22.667c9.373-9.373 24.569-9.373 33.941 0L285.475 239.03c9.373 9.372 9.373 24.568.001 33.941z"/>
+                        </svg>
+                    </li>
+                    <li>Contact</li>
+                </ol>
+            </nav>
+        </div> -->
         <div class="max-w-7xl mx-auto px-4">
             <div class="grid md:grid-cols-4 gap-8 mb-12">
                 <!-- Direct Contact -->
@@ -63,7 +160,7 @@
                     </div>
                     <h3 class="text-xl font-bold mb-4">Bel ons</h3>
                     <p class="text-blueline-gray mb-4">Beschikbaar op werkdagen van 9:00 tot 17:00</p>
-                    <a href="tel:0857609912" class="text-blueline hover:text-blueline-dark font-medium">085-7609912</a>
+                    <a href="tel:0857609912" class="text-blueline hover:text-blueline-dark font-medium" aria-label="Bel ons op 085-7609912">085-7609912</a>
                 </div>
 
                 <!-- WhatsApp -->
@@ -76,7 +173,7 @@
                     </div>
                     <h3 class="text-xl font-bold mb-4">WhatsApp</h3>
                     <p class="text-blueline-gray mb-4">Ook beschikbaar buiten kantoortijden</p>
-                    <a href="https://wa.me/31657577225" class="text-blueline hover:text-blueline-dark font-medium">+316 5757 7225</a>
+                    <a href="https://wa.me/31657577225" class="text-blueline hover:text-blueline-dark font-medium" aria-label="Start WhatsApp gesprek">+316 5757 7225</a>
                 </div>
 
                 <!-- Email -->
@@ -110,26 +207,27 @@
         <div class="max-w-3xl mx-auto px-4">
             <div class="bg-white rounded-lg shadow-lg p-8">
                 <h2 class="text-2xl font-bold mb-6">Stuur ons een bericht</h2>
-                <form>
+                  
+                <form action="/contact-verwerking" method="POST" itemscope itemtype="https://schema.org/ContactForm">
                     <div class="grid md:grid-cols-2 gap-6 mb-6">
                         <div>
                             <label class="block text-gray-700 mb-2" for="name">Naam</label>
-                            <input type="text" id="name" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:border-blueline" required>
+                            <input type="text" id="name" name="name" itemprop="name" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:border-blueline" required>
                         </div>
                         <div>
                             <label class="block text-gray-700 mb-2" for="email">E-mail</label>
-                            <input type="email" id="email" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:border-blueline" required>
+                            <input type="email" id="email" name="email" itemprop="email" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:border-blueline" required>
                         </div>
                     </div>
                     <div class="mb-6">
                         <label class="block text-gray-700 mb-2" for="subject">Onderwerp</label>
-                        <input type="text" id="subject" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:border-blueline" required>
+                        <input type="text" id="subject" name="subject" itemprop="subject" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:border-blueline" required>
                     </div>
                     <div class="mb-6">
                         <label class="block text-gray-700 mb-2" for="message">Bericht</label>
-                        <textarea id="message" rows="6" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:border-blueline" required></textarea>
+                        <textarea id="message" name="message" itemprop="description" rows="6" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:border-blueline" required></textarea>
                     </div>
-                    <button type="submit" class="bg-blueline text-white px-6 py-3 rounded-lg font-medium hover:bg-blueline-dark transition-colors">
+                    <button type="submit" class="bg-blueline text-white px-6 py-3 rounded-lg font-medium hover:bg-blueline-dark transition-colors" aria-label="Verstuur contactformulier">
                         Verstuur bericht
                     </button>
                 </form>
