@@ -21,3 +21,8 @@
         transition-duration: 150ms;
     }
 }
+
+.zeef {
+    @apply bg-gray-100;
+    @apply hidden;
+}

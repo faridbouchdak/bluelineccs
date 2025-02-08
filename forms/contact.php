@@ -3,7 +3,7 @@ session_start();
 
 // Functie om invoer te valideren
 function valideerInvoer($data) {
-    $data = trim($data);
+    $data = trim($data ?? '');
     $data = stripslashes($data);
     $data = htmlspecialchars($data);
     return $data;
@@ -73,9 +73,9 @@ $limiet = 5; // Maximaal aantal verzendingen per uur
 $tijdsduur = 3600; // 1 uur in seconden
 $tijdstempel_sleutel = 'laatste_verzending_' . $ip;
 
-if (isset($_SESSION[$tijdstempel_sleutel])) {
+if (isset($_SESSION[$tijdstempel_sleutel]) && !empty($_SESSION[$tijdstempel_sleutel])) {
     $aantal_verzendingen = count($_SESSION[$tijdstempel_sleutel]);
-    $eerste_verzending_tijd = $_SESSION[$tijdstempel_sleutel][0];
+    $eerste_verzending_tijd = isset($_SESSION[$tijdstempel_sleutel][0]) ? $_SESSION[$tijdstempel_sleutel][0] : time();
 
     // Verwijder verzendingen die ouder zijn dan 1 uur
     if (time() - $eerste_verzending_tijd > $tijdsduur) {
@@ -85,7 +85,7 @@ if (isset($_SESSION[$tijdstempel_sleutel])) {
 
     if ($aantal_verzendingen >= $limiet) {
         logBericht("Rate limit overschreden door IP: $ip");
-        blokkeerIP($ip); // Blokkeer het IP-adres na overschrijding van de limiet
+        blokkeerIP($ip);
         echo "Je hebt het maximale aantal verzendingen per uur bereikt. Je IP-adres is nu geblokkeerd.";
         exit;
     }
@@ -94,10 +94,18 @@ if (isset($_SESSION[$tijdstempel_sleutel])) {
 }
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    // Check if required fields are present
+    if (!isset($_POST['naam']) || !isset($_POST['email']) || !isset($_POST['bericht'])) {
+        logBericht("Ontbrekende velden in formulier van IP: $ip");
+        echo "Alle velden zijn verplicht.";
+        exit;
+    }
+
     // Valideer en sanitize de invoer
-    $naam = valideerInvoer($_POST['naam']);
-    $email = valideerInvoer($_POST['email']);
-    $bericht = valideerInvoer($_POST['bericht']);
+    $naam = isset($_POST['naam']) ? valideerInvoer($_POST['naam']) : '';
+    $email = isset($_POST['email']) ? valideerInvoer($_POST['email']) : '';
+    $onderwerp = isset($_POST['onderwerp']) ? valideerInvoer($_POST['onderwerp']) : '';
+    $bericht = isset($_POST['bericht']) ? valideerInvoer($_POST['bericht']) : '';
 
     // Extra validatie voor e-mailadres
     if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
@@ -121,19 +129,30 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 
     // E-mail versturen
-    $ontvanger = "hey@faridbouchdak.com"; // Vervang dit door je eigen e-mailadres
-    $onderwerp = "Nieuw contactformulier bericht van $naam";
+    $ontvanger = "farid@bouchdak.com"; // Vervang dit door je eigen e-mailadres
+    $onderwerp = "Nieuw contactformulier bericht van $naam, over: $onderwerp";
     $inhoud = "Naam: $naam\nE-mail: $email\nBericht:\n$bericht";
     $headers = "From: $email";
 
-    if (mail($ontvanger, $onderwerp, $inhoud, $headers)) {
+    $apiKey = getenv('aap');
+    $resend = Resend::client($apiKey);
+
+    if (
+    $resend->emails->send([
+      'from' => 'onboarding@resend.dev',
+      'to' => $ontvanger,
+      'subject' => $onderwerp,
+      'html' => $inhoud
+    ])
+    ) {
+    // if (mail($ontvanger, $onderwerp, $inhoud, $headers)) {
         logBericht("Bericht succesvol verzonden door IP: $ip");
 
         // Voeg tijdstempel toe aan sessie voor rate limiting
         $_SESSION[$tijdstempel_sleutel][] = time();
 
         // Doorverwijzen naar de bedankt-pagina
-        header("Location: bedankt.html");
+        header("Location: ../bedankt.html");
         exit;
     } else {
         logBericht("Fout bij verzenden van bericht door IP: $ip");
