@@ -268,7 +268,12 @@
                 <div class="border rounded-lg p-6 flex flex-col" id="enterprise-plan" data-monthly-price="3499" data-quarterly-price="3149">
                     <h3 class="text-xl font-bold mb-4">Enterprise</h3>
                     <p class="text-sm text-gray-600 mb-4">Maatwerk voor grotere bedrijven</p>
-                    <div class="text-3xl font-bold mb-6" id="enterprise-price">€3499<span class="text-lg font-normal">/maand</span></div>
+                    <div class="relative">
+                        <span class="absolute top-[-15px] left-0 text-lg text-blueline font-bold p-0 m-0">vanaf:</span>
+                        <div class="text-3xl font-bold mb-6" id="enterprise-price">
+                            €3499<span class="text-lg font-normal">/maand</span>
+                        </div>
+                    </div>
                     <p class="text-sm text-gray-500 mb-6 hidden kwartaal">eenmaal per kwartaal gefactureerd</p>
 
                     <div class="mb-8">
@@ -276,8 +281,9 @@
                         <ul class="mb-4">
                             <li>E-mail - Live Chat - WhatsApp</li>
                             <li>Facebook Messenger - Instagram</li>
+                            <li>Maatwerk volume</li>
                             <li>Maatwerk tarieven</li>
-                            <li>Maatwerk tarieven</li>
+                            <li>Ook buiten kantoortijden</li>
                             <li>E-commerce bot</li>
                             <li>AI-chatbot</li>
                         </ul>
@@ -342,7 +348,11 @@
                     priceDiv.innerHTML = `
                         €${price}<span class="text-lg font-normal">/maand</span>
                     `;
-                    facturatie.classList.toggle('hidden');
+                    if (option === 'quarterly') {
+                        facturatie.classList.remove('hidden');
+                    } else {
+                        facturatie.classList.add('hidden');
+                    }
                 } else {
                     priceDiv.innerHTML = `
                         €${monthlyPrice}<span class="text-lg font-normal">/maand</span>
