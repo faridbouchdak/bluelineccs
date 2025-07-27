@@ -58,3 +58,15 @@ const script = document.createElement('script');
 script.src = '//eu.fw-cdn.com/12945358/902902.js';
 script.setAttribute('chat', 'true');
 document.body.appendChild(script);
+// To set unique user id in your system when it is available
+window.fcWidget.setExternalId("john.doe1987");
+// To set user name
+window.fcWidget.user.setFirstName("John");
+// To set user email
+window.fcWidget.user.setEmail("john.doe@gmail.com");
+// To set user properties
+// Note that any other fields passed as properties which are not in the CRM Contact properties already, they will be ignored.
+window.fcWidget.user.setProperties({
+  cf_plan: "Pro", // meta property 1
+  cf_status: "Active" // meta property 2
+});
