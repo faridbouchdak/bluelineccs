@@ -58,3 +58,4 @@ const script = document.createElement('script');
 script.src = '//eu.fw-cdn.com/12945358/902902.js';
 script.setAttribute('chat', 'true');
 document.body.appendChild(script);
+window.fcWidget.init({});
